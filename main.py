@@ -95,7 +95,7 @@ def process_page(page_number):
 
         video_filename = os.path.join(download_folder, f"{base_filename}.mp4")
 
-        # Check if transcription already exists
+        # Check if transcription already exists. Do not download the video if the link exists
         if os.path.exists(transcription_file_path):
             print(f"Transcription file {transcription_file_path} already exists. Skipping download and processing.")
             continue
@@ -113,8 +113,7 @@ def process_page(page_number):
         if not os.path.exists(audio_file_path):
             print(f"Extracting audio file {audio_file_path}")
             extract_audio_func(video_filename, audio_file_path)
-            continue
-            
+                        
         
         # Transcribe audio
         transcribe_audio(audio_file_path, transcription_file_path)
