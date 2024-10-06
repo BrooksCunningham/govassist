@@ -187,7 +187,7 @@ def chunk_text(text, chunk_size=500):
     for i in range(0, len(words), chunk_size):
         yield ' '.join(words[i:i + chunk_size])
 
-def process_transcribed_files_in_directory(directory_path):
+def process_transcribed_files_in_directory(directory_path, directory_path_chunks):
     """Prints the full text of all .txt files in the given directory."""
     # Check if the directory exists
     if not os.path.exists(directory_path):
@@ -195,7 +195,7 @@ def process_transcribed_files_in_directory(directory_path):
         return
 
     # List all files in the directory
-    for filename in os.listdir(directory_path):
+    for filename in os.listdir(directory_path, directory_path_chunks):
         # Avoid trying to rechunk data
         if chunks_exist(filename):
             print(f"Chunks already exist for {filename}. Skipping chunking.")
@@ -215,7 +215,7 @@ def process_transcribed_files_in_directory(directory_path):
                     chunks = chunk_text(full_text, chunk_size=500)
 
                     # Save chunks as separate text files
-                    save_chunks(file_path, chunks)
+                    save_chunks(directory_path_chunks, chunks)
 
                     
             except Exception as e:
@@ -230,7 +230,7 @@ def main():
         process_page(page_number)
     
     # process each recording
-    process_transcribed_files_in_directory("transcriptions")
+    process_transcribed_files_in_directory("transcriptions", "transcriptions_chunks")
 
 
 if __name__ == "__main__":
