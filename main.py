@@ -42,11 +42,12 @@ def extract_audio_func(video_file, audio_file):
     except Exception as e:
         print(f"Error extracting audio: {e}")
 
-def save_chunks(transcription_file, chunks):
+def save_chunks(transcription_file, transcription_path, chunks):
     """Saves each chunk to a separate text file."""
-    base_filename = os.path.splitext(transcription_file)[0]
+    base_filename_txt = os.path.basename(transcription_file)
+    base_filename = os.path.splitext(base_filename_txt)[0]
     for i, chunk in enumerate(chunks):
-        chunk_filename = f"{base_filename}_chunk_{i+1}.txt"
+        chunk_filename = os.path.join(transcription_path, f"{base_filename}_chunk_{i+1}.txt")
         with open(chunk_filename, 'w') as f:
             f.write(chunk)
         print(f"Chunk {i+1} saved as {chunk_filename}")
@@ -195,7 +196,7 @@ def process_transcribed_files_in_directory(directory_path, directory_path_chunks
         return
 
     # List all files in the directory
-    for filename in os.listdir(directory_path, directory_path_chunks):
+    for filename in os.listdir(directory_path):
         # Avoid trying to rechunk data
         if chunks_exist(filename):
             print(f"Chunks already exist for {filename}. Skipping chunking.")
@@ -215,9 +216,8 @@ def process_transcribed_files_in_directory(directory_path, directory_path_chunks
                     chunks = chunk_text(full_text, chunk_size=500)
 
                     # Save chunks as separate text files
-                    save_chunks(directory_path_chunks, chunks)
+                    save_chunks(file_path, directory_path_chunks, chunks)
 
-                    
             except Exception as e:
                 print(f"Error reading {filename}: {e}")
 
