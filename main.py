@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import shutil
 import whisper
+from audio_extract import extract_audio
 
 import warnings
 
@@ -36,7 +37,6 @@ def extract_audio_func(video_file, audio_file):
         return
     print(f"Extracting audio from {video_file}...")
     try:
-        from audio_extract import extract_audio
         extract_audio(input_path=video_file, output_path=audio_file)
         print(f"Audio saved as {audio_file}")
     except Exception as e:
@@ -79,20 +79,22 @@ def transcribe_audio(audio_file, transcription_file):
         with open(transcription_file, 'r') as f:
             full_text = f.read()
 
+        return full_text
+
         # Check if chunking has already been performed
-        if chunks_exist(transcription_file):
-            print(f"Chunks already exist for {transcription_file}. Skipping chunking.")
-            return full_text
-        else:
-            print(f"No chunks found for {transcription_file}. Proceeding with chunking.")
-            chunks = chunk_text(full_text, chunk_size=500)
-            save_chunks(transcription_file, chunks)
-            print(f"Chunks created and saved for {transcription_file}.")
-            return full_text
+        # if chunks_exist(transcription_file):
+        #     print(f"Chunks already exist for {transcription_file}. Skipping chunking.")
+        #     return full_text
+        # else:
+        #     print(f"No chunks found for {transcription_file}. Proceeding with chunking.")
+        #     chunks = chunk_text(full_text, chunk_size=500)
+        #     save_chunks(transcription_file, chunks)
+        #     print(f"Chunks created and saved for {transcription_file}.")
+        #     return full_text
     
     print(f"Transcribing audio file {audio_file}...")
     try:
-        model = whisper.load_model("base")
+        model = whisper.load_model("turbo")
         result = model.transcribe(audio_file)
         full_text = result["text"]
 
@@ -101,8 +103,8 @@ def transcribe_audio(audio_file, transcription_file):
             f.write(full_text)
 
         # Proceed with chunking
-        chunks = chunk_text(full_text, chunk_size=500)
-        save_chunks(transcription_file, chunks)
+        # chunks = chunk_text(full_text, chunk_size=500)
+        # save_chunks(transcription_file, chunks)
         print(f"Transcription and chunking completed for {transcription_file}.")
         return full_text
     except Exception as e:
@@ -145,9 +147,10 @@ def process_page(page_number):
             print(f"Transcription file already exists. Skipping download and processing. {transcription_file_path}")
             continue
 
-        if os.path.exists(audio_file_path):
-            print(f"Audio file {audio_file_path} already exists. Skipping download and processing.")
-            continue
+
+        # if os.path.exists(audio_file_path):
+        #     print(f"Audio file {audio_file_path} already exists. Skipping download and processing.")
+        #     continue
 
         # Download the MP4 file
         if not os.path.exists(video_filename) and not os.path.exists(audio_file_path):
@@ -205,21 +208,22 @@ def process_transcribed_files_in_directory(directory_path, directory_path_chunks
         # Filter only .txt files
         if filename.endswith(".txt"):
             file_path = os.path.join(directory_path, filename)
+            # TODO remove this section since chunking really is not ncessary
             print(f"Reading file: {file_path}")
             
             # Open and read the full text of the file
-            try:
-                with open(file_path, 'r') as file:
-                    full_text = file.read()
-
-                    # Chunk the transcription text
-                    chunks = chunk_text(full_text, chunk_size=500)
-
-                    # Save chunks as separate text files
-                    save_chunks(file_path, directory_path_chunks, chunks)
-
-            except Exception as e:
-                print(f"Error reading {filename}: {e}")
+            # try:
+            #     with open(file_path, 'r') as file:
+            #         # full_text = file.read()
+            #
+            #         # Chunk the transcription text
+            #         # chunks = chunk_text(full_text, chunk_size=500)
+            #
+            #         # Save chunks as separate text files
+            #         # save_chunks(file_path, directory_path_chunks, chunks)
+            #
+            # except Exception as e:
+            #     print(f"Error reading {filename}: {e}")
 
 def main():
     # Get total number of pages from the dropdown (example has 5 pages, update dynamically if needed)
