@@ -1,0 +1,58 @@
+# .github/workflows/main.yml
+
+name: Run Transcription Pipeline
+
+# Controls when the action will run.
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Runs the workflow automatically every day at 10:00 AM UTC
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  build-and-transcribe:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python 3.10 environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. Install the system-level FFmpeg dependency required by both moviepy and whisper
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      # 4. Install Python dependencies from requirements.txt
+      #    Ensure you have a requirements.txt file in your repository
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 5. Run the main Python script to perform the transcription
+      - name: Run transcription script
+        run: python main.py
+
+      # 6. Commit the new transcription files back to the repository
+      - name: Commit and push transcription files
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add transcriptions/
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update transcriptions"
+            git push
+          fi
