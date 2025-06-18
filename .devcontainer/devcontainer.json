@@ -1,0 +1,18 @@
+{
+  "name": "Python 3",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+
+  "postCreateCommand": "source venv/bin/activate && pip install -r requirements.txt",
+
+  "postAttachCommand": {
+    "server": "source venv/bin/activate"
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "venv/bin/python"
+      }
+    }
+  }
+}

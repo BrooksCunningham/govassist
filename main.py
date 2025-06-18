@@ -3,19 +3,52 @@ import requests
 from bs4 import BeautifulSoup
 import shutil
 import whisper
-from audio_extract import extract_audio
-
+import logging
+import inspect
 import warnings
 
-# Suppress the torch FutureWarning and UserWarning for FP16
+# --- Diagnostic Block ---
+# This block will help identify if the wrong "whisper" library is being used.
+# The official 'openai-whisper' has the 'load_model' function, while an imposter
+# package on PyPI also named 'whisper' does not.
+try:
+    print("--- WHISPER LIBRARY DIAGNOSTICS ---")
+    print(f"Attempting to load the 'whisper' library...")
+    if hasattr(whisper, 'load_model'):
+        print("SUCCESS: The correct 'openai-whisper' library appears to be loaded.")
+        print(f"Library location: {inspect.getfile(whisper)}")
+    else:
+        print("\n!!! ERROR: The INCORRECT 'whisper' library is installed. !!!")
+        print("This is the likely cause of the 'has no attribute load_model' error.")
+        print(f"The problematic library is located at: {inspect.getfile(whisper)}")
+        print("\nTO FIX THIS, PLEASE RUN THE FOLLOWING COMMANDS IN YOUR TERMINAL:")
+        print("1. pip uninstall whisper")
+        print("2. pip install openai-whisper\n")
+    print("-------------------------------------\n")
+except Exception as e:
+    print(f"An error occurred during the diagnostic check: {e}")
+
+
+# --- Configuration ---
+# Configure logging to provide timestamped, leveled output to see script progress.
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+# Suppress specific warnings from underlying libraries that can be noisy.
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
 
+# --- Constants ---
 # Base URL for the website and the mp4 storage domain
+from moviepy import VideoFileClip
 BASE_URL = "https://meetings.municode.com/PublishPage?cid=YOUNGSVILA&ppid=5d44059a-1e19-4452-a226-babc4b369c18&p={}"
 VIDEO_DOMAIN = "https://storage.sheenomo.live"
 
-# Step 4: Create the download folder if it doesn't exist
+# --- Folder Setup ---
+# Create necessary folders if they don't exist
 download_folder = 'mp4_downloads'
 audio_folder = 'audio_extracts'
 transcription_folder = 'transcriptions'
@@ -24,217 +57,139 @@ os.makedirs(audio_folder, exist_ok=True)
 os.makedirs(transcription_folder, exist_ok=True)
 
 def download_file(url, filename):
-    """Downloads a file from the given URL and saves it with the specified filename."""
-    response = requests.get(url, stream=True)
-    with open(filename, 'wb') as out_file:
-        shutil.copyfileobj(response.raw, out_file)
-    del response
+    """Downloads a file from a URL using a streaming request for efficiency."""
+    logging.info(f"Downloading video to {filename} from {url}...")
+    try:
+        # Use a context manager for the request to ensure the connection is closed.
+        with requests.get(url, stream=True, timeout=300) as response:
+            response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
+            with open(filename, 'wb') as out_file:
+                shutil.copyfileobj(response.raw, out_file)
+        logging.info(f"Successfully downloaded {filename}")
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error downloading {url}: {e}")
 
 def extract_audio_func(video_file, audio_file):
-    """Extracts audio from the given video file and saves it as an audio file using ffmpeg."""
+    """
+    Extracts audio from a video file using moviepy.
+    ENHANCED: Uses a context manager (`with` statement) for robust resource handling,
+    ensuring files are closed properly even if errors occur.
+    """
     if os.path.exists(audio_file):
-        print(f"Audio file {audio_file} already exists. Skipping extraction.")
+        logging.info(f"Audio file {audio_file} already exists. Skipping extraction.")
         return
-    print(f"Extracting audio from {video_file}...")
+
+    logging.info(f"Extracting audio from {video_file}...")
     try:
-        extract_audio(input_path=video_file, output_path=audio_file)
-        print(f"Audio saved as {audio_file}")
+        # Using a context manager ensures that video file handles are closed automatically.
+        with VideoFileClip(video_file) as video_clip:
+            audio_clip = video_clip.audio
+            if audio_clip:
+                # Specify codec and bitrate for consistent, high-quality MP3 output.
+                audio_clip.write_audiofile(audio_file, codec='libmp3lame', bitrate='192k')
+                logging.info(f"Audio successfully saved as {audio_file}")
+            else:
+                logging.warning(f"Video file {video_file} appears to have no audio track.")
     except Exception as e:
-        print(f"Error extracting audio: {e}")
-
-def save_chunks(transcription_file, transcription_path, chunks):
-    """Saves each chunk to a separate text file."""
-    base_filename_txt = os.path.basename(transcription_file)
-    base_filename = os.path.splitext(base_filename_txt)[0]
-    for i, chunk in enumerate(chunks):
-        chunk_filename = os.path.join(transcription_path, f"{base_filename}_chunk_{i+1}.txt")
-        with open(chunk_filename, 'w') as f:
-            f.write(chunk)
-        print(f"Chunk {i+1} saved as {chunk_filename}")
-
-def chunks_exist(transcription_file):
-    """Check if chunk files for the given transcription already exist."""
-    base_filename = os.path.splitext(transcription_file)[0]
-    # We assume that chunk files are named as <base_filename>_chunk_X.txt
-    i = 1
-    while True:
-        chunk_filename = f"{base_filename}_chunk_{i}.txt"
-        if os.path.exists(chunk_filename):
-            i += 1
-        else:
-            break
-    return i > 1  # Returns True if any chunk files exist
+        # Catching broad exceptions to handle potential moviepy/ffmpeg errors.
+        logging.error(f"Error extracting audio with moviepy from {video_file}: {e}")
+        logging.error("This might be due to a missing or misconfigured FFmpeg installation.")
 
 def transcribe_audio(audio_file, transcription_file):
-    """Transcribes the audio file using Whisper, chunks the transcription, and saves each chunk."""
+    """Transcribes the given audio file using OpenAI's Whisper model."""
     if not os.path.exists(audio_file):
-        print(f"Error: {audio_file} does not exist. Cannot transcribe.")
-        return None
-    
-    # If the transcription file already exists, load and return its content
-    if os.path.exists(transcription_file):
-        print(f"Transcription file already exists. {transcription_file}")
-
-        # Read the full transcription text
-        with open(transcription_file, 'r') as f:
-            full_text = f.read()
-
-        return full_text
-
-        # Check if chunking has already been performed
-        # if chunks_exist(transcription_file):
-        #     print(f"Chunks already exist for {transcription_file}. Skipping chunking.")
-        #     return full_text
-        # else:
-        #     print(f"No chunks found for {transcription_file}. Proceeding with chunking.")
-        #     chunks = chunk_text(full_text, chunk_size=500)
-        #     save_chunks(transcription_file, chunks)
-        #     print(f"Chunks created and saved for {transcription_file}.")
-        #     return full_text
-    
-    print(f"Transcribing audio file {audio_file}...")
-    try:
-        model = whisper.load_model("turbo")
-        result = model.transcribe(audio_file)
-        full_text = result["text"]
-
-        # Save the full transcription text
-        with open(transcription_file, 'w') as f:
-            f.write(full_text)
-
-        # Proceed with chunking
-        # chunks = chunk_text(full_text, chunk_size=500)
-        # save_chunks(transcription_file, chunks)
-        print(f"Transcription and chunking completed for {transcription_file}.")
-        return full_text
-    except Exception as e:
-        print(f"Error during transcription: {e}")
-        return None
-
-
-def process_page(page_number):
-    """Processes each page of the meeting, extracts MP4 URLs, handles downloading, audio extraction, and transcription."""
-    print(f"Processing page {page_number}...")
-    
-    # Get the page's HTML content
-    url = BASE_URL.format(page_number)
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
-
-    # Find all the rows with multimedia links (mp4 files)
-    mp4_links = soup.find_all('a', href=lambda href: href and 'storage.sheenomo.live' in href)
-    
-    for link in mp4_links:
-        video_url = link['href']  # The MP4 file URL
-        img_tag = link.find('img')  # Find the associated <img> tag inside the <a>
-
-        # Generate the file name based on the alt attribute or use a default
-        if img_tag and 'alt' in img_tag.attrs:
-            base_filename = img_tag['alt'].replace(' ', '_').replace(':', '').replace(',','') + '.mp4'  # Use the alt attribute for naming
-        else:
-            base_filename = 'unnamed_video.mp4'  # Default name if no alt attribute is found
-
-        # Generate the audio and transcription file names
-        audio_file_name = base_filename.replace('.mp4', '.mp3')
-        transcription_file_name = base_filename.replace('.mp4', '.txt')
-        audio_file_path = os.path.join(audio_folder, audio_file_name)
-        transcription_file_path = os.path.join(transcription_folder, transcription_file_name)
-
-        video_filename = os.path.join(download_folder, f"{base_filename}.mp4")
-
-        # Check if transcription already exists. Do not download the video if the link exists
-        if os.path.exists(transcription_file_path):
-            print(f"Transcription file already exists. Skipping download and processing. {transcription_file_path}")
-            continue
-
-
-        # if os.path.exists(audio_file_path):
-        #     print(f"Audio file {audio_file_path} already exists. Skipping download and processing.")
-        #     continue
-
-        # Download the MP4 file
-        if not os.path.exists(video_filename) and not os.path.exists(audio_file_path):
-            print(f"Downloading video {video_filename} from {video_url}...")
-            download_file(video_url, video_filename)
-
-        # Extract audio
-        if not os.path.exists(audio_file_path):
-            print(f"Extracting audio file {audio_file_path}")
-            extract_audio_func(video_filename, audio_file_path)
-                        
-        
-        # Transcribe audio
-        transcribe_audio(audio_file_path, transcription_file_path)
-        
-        # Remove video file after extraction
-        if os.path.exists(video_filename):
-            print(f"Removing video file {video_filename}...")
-            os.remove(video_filename)
-
-def chunks_exist(transcription_file):
-    """Check if chunk files for the given transcription already exist."""
-    base_filename = os.path.splitext(transcription_file)[0]
-    # We assume that chunk files are named as <base_filename>_chunk_X.txt
-    i = 1
-    while True:
-        chunk_filename = f"{base_filename}_chunk_{i}.txt"
-        if os.path.exists(chunk_filename):
-            i += 1
-        else:
-            break
-    return i > 1  # Returns True if any chunk files exist
-
-def chunk_text(text, chunk_size=500):
-    """Splits the text into chunks of a given size (default: 500 words)."""
-    words = text.split()
-    # Create chunks of up to `chunk_size` words
-    for i in range(0, len(words), chunk_size):
-        yield ' '.join(words[i:i + chunk_size])
-
-def process_transcribed_files_in_directory(directory_path, directory_path_chunks):
-    """Prints the full text of all .txt files in the given directory."""
-    # Check if the directory exists
-    if not os.path.exists(directory_path):
-        print(f"Error: Directory {directory_path} does not exist.")
+        logging.error(f"Audio file {audio_file} does not exist. Cannot transcribe.")
         return
 
-    # List all files in the directory
-    for filename in os.listdir(directory_path):
-        # Avoid trying to rechunk data
-        if chunks_exist(filename):
-            print(f"Chunks already exist for {filename}. Skipping chunking.")
+    if os.path.exists(transcription_file):
+        logging.info(f"Transcription {transcription_file} already exists. Skipping.")
+        return
+
+    logging.info(f"Transcribing audio file {audio_file} with 'base' model...")
+    try:
+        # Load the Whisper model. For higher accuracy, consider "small" or "medium".
+        model = whisper.load_model("base")
+        result = model.transcribe(audio_file, fp16=False) # fp16=False can improve compatibility
+        full_text = result["text"]
+
+        # Save the full transcription text to a file.
+        with open(transcription_file, 'w', encoding='utf-8') as f:
+            f.write(full_text)
+        logging.info(f"Transcription saved to {transcription_file}")
+    except Exception as e:
+        logging.error(f"Error during transcription of {audio_file}: {e}")
+
+def process_page(page_number):
+    """Processes a single page: finds video links and orchestrates the download-extract-transcribe workflow."""
+    logging.info(f"Processing page {page_number}...")
+    
+    url = BASE_URL.format(page_number)
+    try:
+        response = requests.get(url, timeout=60)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Could not retrieve page {page_number}. Error: {e}")
+        return
+
+    soup = BeautifulSoup(response.content, "html.parser")
+    # Find all anchor tags whose href contains the video storage domain
+    mp4_links = soup.find_all('a', href=lambda href: href and VIDEO_DOMAIN in href)
+    
+    if not mp4_links:
+        logging.info(f"No video links found on page {page_number}.")
+        return
+
+    for link in mp4_links:
+        video_url = link['href']
+        img_tag = link.find('img')
+        base_filename = ""
+
+        if img_tag and 'alt' in img_tag.attrs:
+            # Sanitize filename from the image's alt text for better readability.
+            sanitized_name = img_tag['alt'].replace(' ', '_').replace(':', '').replace(',', '')
+            base_filename = f"{sanitized_name}"
+        else:
+            # Create a fallback name from the URL if no alt text is available.
+            base_filename = os.path.splitext(os.path.basename(video_url))[0]
+
+        # Define file paths for each stage of the process.
+        video_filename = os.path.join(download_folder, f"{base_filename}.mp4")
+        audio_file_path = os.path.join(audio_folder, f"{base_filename}.mp3")
+        transcription_file_path = os.path.join(transcription_folder, f"{base_filename}.txt")
+
+        # --- Main Workflow Logic ---
+        # 1. Skip all steps if the final output (transcription) already exists.
+        if os.path.exists(transcription_file_path):
+            logging.info(f"Final transcription exists for {base_filename}. Skipping all steps.")
             continue
 
-        # Filter only .txt files
-        if filename.endswith(".txt"):
-            file_path = os.path.join(directory_path, filename)
-            # TODO remove this section since chunking really is not ncessary
-            print(f"Reading file: {file_path}")
-            
-            # Open and read the full text of the file
-            # try:
-            #     with open(file_path, 'r') as file:
-            #         # full_text = file.read()
-            #
-            #         # Chunk the transcription text
-            #         # chunks = chunk_text(full_text, chunk_size=500)
-            #
-            #         # Save chunks as separate text files
-            #         # save_chunks(file_path, directory_path_chunks, chunks)
-            #
-            # except Exception as e:
-            #     print(f"Error reading {filename}: {e}")
+        # 2. Download video only if the audio doesn't already exist and the video isn't already there.
+        if not os.path.exists(audio_file_path) and not os.path.exists(video_filename):
+            download_file(video_url, video_filename)
+        
+        # 3. Extract audio if the video file is present.
+        if os.path.exists(video_filename):
+            extract_audio_func(video_filename, audio_file_path)
+        
+        # 4. Transcribe the audio file if it exists.
+        transcribe_audio(audio_file_path, transcription_file_path)
+        
+        # 5. Clean up by removing the large video file after processing.
+        if os.path.exists(video_filename):
+            logging.info(f"Removing video file {video_filename} to save space...")
+            os.remove(video_filename)
+        
+        logging.info("-" * 20)
 
 def main():
-    # Get total number of pages from the dropdown (example has 5 pages, update dynamically if needed)
-    total_pages = 5  # Based on the HTML provided, there are 5 pages
+    """Main function to run the scraper and transcription process."""
+    # Assuming there are 5 pages to process based on the website structure.
+    total_pages = 5
     
-    # Process each page
     for page_number in range(1, total_pages + 1):
         process_page(page_number)
     
-    # process each recording
-    process_transcribed_files_in_directory("transcriptions", "transcriptions_chunks")
+    logging.info("\nProcessing complete.")
 
 
 if __name__ == "__main__":
