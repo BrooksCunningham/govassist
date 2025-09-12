@@ -2,7 +2,7 @@
   "name": "Python 3",
   "image": "mcr.microsoft.com/devcontainers/python:3",
 
-  "postCreateCommand": "source venv/bin/activate && pip install -r requirements.txt",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg && source venv/bin/activate && pip install -r requirements.txt",
 
   "postAttachCommand": {
     "server": "source venv/bin/activate"
