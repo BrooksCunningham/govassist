@@ -20,11 +20,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Python 3.10 environment
+      # 2. Set up Python 3.11 environment
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       # 3. Install the system-level FFmpeg dependency required by both moviepy and whisper
       - name: Install FFmpeg
