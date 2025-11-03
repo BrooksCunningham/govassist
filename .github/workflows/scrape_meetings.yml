@@ -1,0 +1,58 @@
+# .github/workflows/scrape_meetings.yml
+
+name: Scrape Meeting Documents
+
+# Controls when the action will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Runs the workflow automatically every month on the 1st at midnight UTC
+  schedule:
+    - cron: '0 0 1 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checks out your repository under $GITHUB_WORKSPACE
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python 3.11 environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Install Python dependencies for web scraping
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      # 4. Run the scraping script
+      - name: Run scraping script
+        run: python scrape.py
+
+      # 5. Commit the updated files back to the repository (only if changes exist)
+      - name: Commit and push updated meeting documents
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Add the output file and scraped content directory
+          git add notebooklm_source.txt scraped_content/
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No new meetings found. No changes to commit."
+          else
+            git commit -m "Update meeting documents - $(date +'%Y-%m-%d')"
+            git push
+            echo "✓ Successfully updated meeting documents"
+          fi

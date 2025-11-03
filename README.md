@@ -9,6 +9,7 @@ Govassist is a utility designed to automate the process of downloading, extracti
 - **Audio Extraction**: Automatically extracts audio tracks from downloaded video files.
 - **Speech-to-Text Transcription**: Converts extracted audio into accurate, timestamped text using advanced speech recognition libraries.
 - **Chunked Transcriptions**: Stores meeting transcriptions in manageable text file chunks for easy review and downstream processing.
+- **Meeting Document Scraper**: Automatically scrapes HTML Agenda and HTML Packet documents from meeting archives and consolidates them into a single NotebookLM-ready file.
 - **Error Handling**: Provides clear diagnostic messages and pip installation hints for common issues.
 
 ## Use Cases
@@ -69,6 +70,50 @@ tax policy and budget expert because I think what the families of Lafayette pare
 ```
 
 Each file represents a segment of a meeting for easier navigation and review.
+
+## Meeting Document Scraper
+
+The `scrape.py` script provides automated scraping of meeting agendas and packets from Youngsville municipal websites.
+
+### Features
+
+- Scrapes HTML Agenda and HTML Packet documents from all pages of meeting archives
+- Extracts clean text content (removes navigation, scripts, and styles)
+- Combines all documents into a single `notebooklm_source.txt` file for use with NotebookLM
+- Includes source URLs and document metadata in the output
+- Respects rate limiting with 1-second delays between requests
+
+### Usage
+
+```bash
+python scrape.py
+```
+
+The script will:
+1. Create a `scraped_content/` directory for intermediate files
+2. Fetch all pages from the Youngsville meeting archive
+3. Download and extract text from each HTML Agenda and HTML Packet
+4. Generate `notebooklm_source.txt` with all combined content
+
+### Automated Monthly Updates
+
+A GitHub Action runs automatically on the 1st of each month to:
+- Scrape the latest meeting documents
+- Update `notebooklm_source.txt` if new meetings are found
+- Commit changes back to the repository
+
+You can also trigger the workflow manually from the Actions tab.
+
+### Configuration
+
+- `BASE_URL`: The municode iframe URL (currently configured for Youngsville, LA)
+- `TOTAL_PAGES`: Number of pages to scrape (default: 4)
+- `TARGET_LINK_TEXTS`: Document types to scrape (default: ["HTML Packet", "HTML Agenda"])
+
+### Output
+
+- **`notebooklm_source.txt`**: Combined text file ready for NotebookLM upload
+- **`scraped_content/`**: Directory with individual text files for each document
 
 ## License
 
