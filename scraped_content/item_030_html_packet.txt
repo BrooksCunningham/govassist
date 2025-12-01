@@ -1,95 +1,125 @@
 SOURCE: HTML Packet
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=1720cb364c044fd3a0bb42b4ff881e08&ip=true
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=a7f8a7dd447d420e9003d2c90ebe5d1b&ip=true
 ================================================================================
 
 1.
 OPENING
 1.1
-Invocation led by Pastor Travis Minnich, First Assembly-Youngsville
+Invocation led by Pastor Chris Fuselier, First Baptist Church
 1.2
 Pledge of Allegiance led by Matt Romero
 2.
 ROLL CALL
 3.
-RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
+PERSONS TO ADDRESS THE MAYOR & COUNCIL
 3.1
-Bayou Vermilion Districts annual report on activities.
+Todd Istre to address the Council on his candidacy for Youngsville City Council, Division D.
 3.2
-Logan Lannoo to announce his candidacy for City Council, Division D.
+Cody Louviere to address the Council on his candidacy for Youngsville Chief of Police.
 4.
 MINUTES
 4.1
-Approval of September 12, 2024 meeting minutes
-2024.9.12 Minutes.pdf
-(0.03
+Approval of October 10, 2024 meeting minutes
+2024.10.10 minutes.pdf
+(0.04
 MB)
 5.
 FINANCE REPORT
 5.1
-Approval of August 2024 Finance report
-2024.08.31 FINANCIALS.pdf
-(1.05
+Approval of September 2024 Finance report
+2024.09.30 FINANCIALS.pdf
+(1.03
 MB)
 6.
 OTHER BUSINESS
 6.1
-Brian Clement to request a variance to waive the required minimum depth of 200’ for commercial development along Hwy 89 for Le Jardin d'Abel Cottages.
-Le Jardin d' Abel Cottages Preliminary Plat.pdf
-(0.65
-MB)
+Bid Review - Waste Water Treatment Plant
 6.2
-Discuss and consider amending the 2024-2025 Sports Complex Fund Budget in the approximate amount of $126,000 for bridge repairs and bulkheading at the Sports Complex.
-Proposal - Youngsville Recreation Abutment Repair.pdf
-(0.12
-MB)
-Invoice Youngsville Sports Deposit.pdf
-(0.11
+Proclaim November 30, 2024 as Small Business Saturday "Shop the Sweet Life!"
+Small Business Saturday 2024.pdf
+(0.03
 MB)
 6.3
-Discuss and consider amending the 2024-2025 Budget in the approximate amount of $200,000 to increase funding for repairs to the Guillot Rd./Chemin Metairie Pkwy. Roundabout.
+Lucas Knepper to request a variance from Section 105-57 "Storage, collection and disposal of refuse and garbage.", to allow for a valet trash service in lieu of City trash pickup/cans for Sugar Mill Pond, Phase 27.
+SMP 27 Dumpster Variance Request.pdf
+(1.72
+MB)
+6.4
+Travis Roberts to request a variance to allow a 5' reduction in the rear setback for the installation of a shed, located at 204 Oak Shadows Drive.
+Note: On 7.12.2018 Council approved a 5' reduction in rear setback for a swimming pool.
+204 Site Plan - New Building.pdf
+(0.24
+MB)
+Grant_President - Oak Shadows HOA - Request Approval Letter for Shed from HOA.pdf
+(0.15
+MB)
+Bennette_Treasurer - Oak Shadows HOA - Request Approval Letter for Shed from HOA.pdf
+(0.12
+MB)
 7.
 RESOLUTIONS
 7.1
-Resolution No. 2024-17
-- A Resolution of the City of Youngsville authorizing the Mayor to execute a first amendment to a contract with Acadian Ambulance Service, Inc. to exclusively provide emergency and non-emergency ground ambulance services and rotor-wing air ambulance transports for the City of Youngsville.
-Reso. No. 2024-17  Acadian Ambulance Renewal.pdf
+Resolution No. 2024-19
+- A Resolution expressing support in the naming of Sugar Mill Pond Regional Detention Pond & Linear Park System in honor of the late Mr. Robert W. Daigle.
+Reso. No. 2024-19 Support Naming of SMP Pond & Linear Park System.pdf
 (0.02
-MB)
-Acadian Ambulance First Amendment City.pdf
-(0.12
 MB)
 7.2
-Resolution No. 2024-18
-- A Resolution authorizing the Mayor of the City of Youngsville to extend an Intergovernmental Agreement with Lafayette Consolidated Government for one year concerning assistance with various minor maintenance items.
-Reso. No. 2024-18  IGA - LCG - Minor Maintenance.pdf
+Resolution No. 2024-20
+- A Resolution of condolences to the family of Benjamin "Ben" F. Burley, former Youngsville City Treasurer, who passed away on October 25, 2024.
+Reso. No. 2024-20 Condolences Benjamin Burley.pdf
 (0.02
 MB)
-Extension Letter for Contract #590-22-035 IGA between LCG and Youngsville.pdf
-(0.05
+7.3
+Resolution No. 2024-21
+- A Resolution authorizing the Mayor of the City of Youngsville to execute a Cooperative Endeavor Agreement and all necessary documentation between the Louisiana Department of Treasury, State of Louisiana, and the City of Youngsville pertaining to an appropriation from Act 776 of the 2024 Regular Legislative Session for water and road infrastructure.
+Reso. No. 2024-21 Cooperative Endeavor Agreement.pdf
+(0.02
+MB)
+7.4
+Resolution No. 2024-22
+- A Resolution requesting financial assistance from the State of Louisiana under the Fiscal Year 2024-2025 Local Government Assistance Program and Community Water Enrichment Fund Program.
+Reso. No. 2024-22 LGAP CWEF Grant Application 2024-2025.pdf
+(0.02
 MB)
 8.
-ORDINANCES FOR FINAL ADOPTION
+ORDINANCES FOR INTRODUCTION
 8.1
-Ordinance No. 495-2024
-- An Ordinance of the City of Youngsville, Louisiana authorizing the City of Youngsville to sell certain immovable surplus property located at 301 Fourth Street, Youngsville, Louisiana, which is not needed for public purposes.
-Ord. No. 495-2024  Surplus Property 301 Fourth St.pdf
+Ordinance No. 496-2024
+- An Ordinance of the City of Youngsville authorizing the Mayor of the City of Youngsville, Louisiana, to execute a Franchise Agreement with Uniti Fiber GulfCo, LLC.
+Ord. No. 496-2024 Uniti Fiber Franchise Agreement.pdf
+(0.02
+MB)
+City of Youngsville Franchise Agreement.pdf
 (0.03
+MB)
+8.2
+Ordinance No. 497-2024
+- An Ordinance of the City of Youngsville amending the 2024-2025 Budget in the amount of $2,719,155 to re-appropriate American Rescue Plan Act (ARPA) Funding.
+Ord. No. 497-2024 Amend Budget ARPA Re-Appropriation.pdf
+(0.02
+MB)
+8.3
+Ordinance No. 357.3-2024
+- An Ordinance amending Ordinance No. 357.2-2024 Performance Land Use Regulations within the city limits of the City of Youngsville, Louisiana.
+Ord. No. 357.3-2024 Land Use Ordinance Amendment.pdf
+(0.08
 MB)
 9.
 MAYOR & COUNCIL ANNOUNCEMENTS
 9.1
 Mayor/Staff Announcements
-2024-10 Engineer Report.pdf
-(0.03
+2024.11.14 Engineering Report.pdf
+(0.10
 MB)
-2024-10-10 Sports Complex Report.pdf
+2024.11.14 DSA Report.pdf
 (0.02
 MB)
-2024.10.10 DSA Report.pdf
-(0.02
-MB)
-2024.10.10 Neel Schaffer Report.pdf
+2021.11.14 Neel Schaffer Report.pdf
 (0.19
+MB)
+2024.11.14 YSC Report.pdf
+(0.02
 MB)
 9.2
 Council Announcements

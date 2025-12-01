@@ -1,99 +1,97 @@
 SOURCE: HTML Packet
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=312714a5b6f9498d9b5b420017aea0d8&ip=true
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=9f740e7fb5ea4ebdafb8fd4aff6ef7f2&ip=true
 ================================================================================
 
 1.
 OPENING
 1.1
-Invocation led by Pastor Andy Tribe, Youngsville Community Church.
+Invocation led by Pastor Travis Minnich, First Assembly Youngsville.
 1.2
-Pledge of Allegiance led by Lindy Bolgiano.
+Pledge of Allegiance led by Nicholas Niland.
 2.
 ROLL CALL
 3.
-MINUTES
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
 3.1
-Approval of August 14, 2025 meeting minutes.
-8.14.25 minutes.pdf
+Francis Touchet, Jr., Superintendent of Lafayette Parish School System to provide a quarterly update.
+4.
+MINUTES
+4.1
+Approval of September 11, 2025 meeting minutes.
+9.11.25 minutes.pdf
 (0.04
 MB)
-3.2
-Approval of August 22, 2025 special meeting minutes.
-8.22.25 Minutes.pdf
-(0.03
-MB)
-4.
+5.
 FINANCE REPORT
-4.1
-Approval of July 2025 finance report.
-9.11.25 FINANCIALS.pdf
+5.1
+Approval of August 2025 finance report.
+2025.08.31 FINANCIALS.pdf
 (1.21
 MB)
-5.
-ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
-5.1
-Ordinance No. 498-2025
-- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 155 “Traditional Neighborhood Development" to amend design standards for Traditional Neighborhood Developments.
-Ord. No. 498-2025 Amend Chapter 155 TND REVISED.pdf
-(2.65
-MB)
-5.2
-Ordinance No. 503-2025
-- An aggregate amendment and revisions of the City of Youngsville, State of Louisiana's and Youngsville Sales Tax District No. 1's Sales and Use Tax Ordinances totaling 3.50%.
-Ord. No. 503-2025 Aggregate Sales and Use Tax Ordinance REVISED.pdf
-(0.71
-MB)
-5.3
-Ordinance No. 507-2025
-- An Ordinance of the City of Youngsville establishing and recognizing a Fire Prevention Bureau within the Youngsville Volunteer Fire Department.
-Ord. No. 507-2025 Fire Prevention Bureau REVISED.pdf
-(0.16
-MB)
 6.
-PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+OTHER BUSINESS
 6.1
-Request for Preliminary Plat approval of Sugar Mill Pond, Phase 29, located in Section 7, T11S, R5E.
-SMP Phase 29 Preliminary Plat Approval Letter.pdf
-(0.15
+Chris Lafleur to request a variance to Section 105-73 (b) (4) to allow encroachment within the utility easement along Braham Dr., for a proposed building addition located at 115 Guernsey Ln.
+115 Guernsey Lane Easement Variance (October 2025).pdf
+(0.07
 MB)
-SMP 29 - ADRC REPORT.pdf
-(0.09
+115 Guernsey Lane - 2025019_SIGNED_PROPOSED_ADDITION_PLAT_10-1-2025.pdf
+(0.18
 MB)
-SMP 29 - Preliminary Plat .pdf
-(1.29
+115 Guernsey Lane - AR-25-011299 OSFM FINAL.pdf
+(8.56
+MB)
+6.2
+David Robichaux to request a variance to Section 107-9 (4) to allow a reduction in the driveway width & radius for a proposed apartment building to be located at 110 Oceans Blvd.
+110 Oceans Boulevard Driveway Variance Package (October 2025).pdf
+(0.22
+MB)
+6.3
+John Harvey to request the following variances for the subdivision of a parcel into two lots, located at 100 Eugene St.:
+1. Waive Section 110-4 (I.)(b)(1), to eliminate the requirement of the lot size.
+2. Waive Section 110-4 (I.)(b)(2), to eliminate the requirement of the lot width.
+100 Eugene Street Subdivision Variance.pdf
+(0.06
+MB)
+Plat - John Harvey Eugene St.pdf
+(0.11
 MB)
 7.
-OTHER BUSINESS
+PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
 7.1
-Walter Comeaux to request a variance to allow a reduction in the required 20' front setback to 15' for Lots 1-6 and 77-82 of Southern Trails Subdivision.
-Southern Trails Correspondence.pdf
-(0.03
+Request for Preliminary Plat approval of a partition of Lot 7-A of Block 9 creating Lots 7-A-1 and 7-A-2 for John Harvey, located in Section 79, T7S, R3E.
+Preliminary Plat Review Letter - 100 Eugene Street Subdivision.pdf
+(0.99
 MB)
-Southern Trails_Preliminary Plat.pdf
-(1.84
-MB)
-7.2
-Councilwoman Simone B. Champagne to provide an update on proposing the division of the City of Youngsville into municipal districts.
 8.
 RESOLUTIONS
 8.1
-Resolution No. 2025-21
-- A Resolution recognizing the distinguished service of the late Earl Menard and naming the Youngsville Police Department Patrol Center as the "Chief Earl Menard Patrol Center".
-Reso. No. 2025-21 Naming Patrol Center after Earl Menard.pdf
-(0.02
-MB)
-8.2
-Resolution No. 2025-22
-- A Resolution of the City of Youngsville authorizing and directing the Mayor to execute an Intergovernmental Agreement between the City of Youngsville and Lafayette City-Parish Consolidated Government for surface improvements to S. Larriviere Road: LA 92 - Chemin Metairie.
-Reso. No. 2025-22 IGA with LCG for S. Larriviere Rd Improvements.pdf
-(0.02
-MB)
-IGA Youngsville LCG for Surface Improvments to S. Larriviere.pdf
+Resolution No. 2025-23
+- A Resolution authorizing the Mayor to enter into an Intergovernmental Cooperative Endeavor Agreement with the LA Department of Transportation and Development for the transfer of the ownership, operation, and maintenance of a portion of state route LA 92-1 (known as Young Street) from its junction with the local road known as Larriviere Road proceeding east approximately 0.200 miles to the City of Youngsville corporate limits.
+Reso. No. 2025-23 CEA DOTD LA 92-1.pdf
 (0.03
 MB)
+LA92-1-ArcMap2.pdf
+(0.58
+MB)
+LA92-1-draft-CEA.pdf
+(0.16
+MB)
+8.2
+Resolution No. 2025-24
+- A Resolution authorizing the Mayor of the City of Youngsville to execute a Cooperative Endeavor Agreement and all necessary documentation between the Louisiana Department of Treasury, State of Louisiana, and the City of Youngsville to an appropriation from ACT 461 of the 2025 Regular Legislative Session for road improvements.
+Reso. No. 2025-24 CEA ACT 461 Road Improvements.pdf
+(0.02
+MB)
 9.
-ORDINANCES FOR INTRODUCTION
+ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
 9.1
+Ordinance No. 498-2025
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 155 "Traditional Neighborhood Development" to amend design standards for Traditional Neighborhoods Developments.
+Ord. No. 498-2025 Amend Chapter 155 TND Revised 2.pdf
+(1.68
+MB)
+9.2
 Ordinance No. 397.1-2025
 - An Ordinance amending Chapter 107 "Commercial Development Requirements", Section 107-5. "Architecture" to revise the acceptable building materials for exterior walls.
 Ord. No. 397.1-2025 Commercial Development Regulations - Facade.pdf
@@ -106,16 +104,16 @@ MB)
 MAYOR & COUNCIL ANNOUNCEMENTS
 10.1
 Mayor/Staff Announcements
-9.11.25 YSC Report .pdf
+10.9.25 Sports Complex Report.pdf
 (0.03
 MB)
-Engineers Report.pdf
+10.9.25 Engineer Report.pdf
 (0.10
 MB)
-9.11.25 Neel-Schaffer Report.pdf
+10.9.25 Neel Schaffer Report.pdf
 (0.19
 MB)
-9.11.25 DSA Report.pdf
+10.9.25 DSA Report.pdf
 (0.02
 MB)
 10.2

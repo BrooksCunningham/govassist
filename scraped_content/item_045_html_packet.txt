@@ -1,5 +1,5 @@
-SOURCE: HTML Agenda
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=baa6b1fcc6bd44a4a560b91cfe4b3a7b&ip=false
+SOURCE: HTML Packet
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=baa6b1fcc6bd44a4a560b91cfe4b3a7b&ip=true
 ================================================================================
 
 1.
@@ -19,9 +19,21 @@ ORDINANCES FOR FINAL ADOPTION
 4.1
 Budget Amendment Ordinance No. 490-2024
 - An Ordinance amending the Annual Operating Budget of Revenues and Expenditures for the City of Youngsville, Louisiana for Fiscal Year 2023-2024.
+Ord. No. 490-2024 Amended Budget FY 2023-2024.pdf
+(0.02
+MB)
+2024 ESTIMATED FINAL.pdf
+(0.26
+MB)
 4.2
 Budget Ordinance No. 491-2024
 - An Ordinance Adopting the Annual Operating Budget of Revenues and Expenditures for the City of Youngsville, Louisiana for Fiscal Year 2024-2025.
+Ord. No. 491-2024 Final Adopted Budget FY 2024-2025.pdf
+(0.02
+MB)
+2025 BUDGET FINAL.pdf
+(0.26
+MB)
 5.
 ADJOURNMENT
 5.1

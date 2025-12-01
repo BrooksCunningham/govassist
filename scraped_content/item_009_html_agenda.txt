@@ -1,60 +1,92 @@
 SOURCE: HTML Agenda
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=4f37880b8f7c4080bae3159ca3e21210&ip=false
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=d18f310ce2c0412ea62b9068a846ae0a&ip=false
 ================================================================================
 
 1.
 OPENING
 1.1
-Invocation led by Pastor Andy Manning, Church Acadiana.
+Invocation led by Pastor John Cannon, Asbury United Methodist.
 1.2
-Pledge of Allegiance led by Simone B. Champagne.
+Pledge of Allegiance led by Shannon D. Bares.
 2.
 ROLL CALL
 3.
 MINUTES
 3.1
-Approval of June 26, 2025 meeting minutes.
+Approval of July 10, 2025 meeting minutes.
 4.
 FINANCE REPORT
 4.1
-Approval of May 2025 finance report.
+Approval of June 2025 finance report.
 5.
-PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
 5.1
-Request for Preliminary Plat approval to subdivide Lot 5 (701 A & D Young St.) into Lots 5-A & 5-B, located in Section 8, T11S, R5E.
+Chief Broussard to present a life-saving award to Officer Shane Ashraf.
+5.2
+Lafayette Parish Councilman Ken Stansbury, District 3, to provide a Parish update.
 6.
 OTHER BUSINESS
 6.1
-Teddy Knatt to request the following for Tract 2 of the 300 Block of Briarcliff Dr.:
-(a) a variance to waive the required 51% facade requirement, to allow an approximate 1,200 sq. ft. metal building for personal storage; and
-(b) to request approval to begin the annexation process.
+Stacie Landry to request a variance to the Sign Ordinance to waive the size of a monument sign (Section 145-4 (c) (2)) and the number of wall signs (Section 145-4 (c) (5)), for Wendy's to be located at 103 Centre Sarcelle Rd.
 6.2
-Discuss and consider a variance to waive the façade requirement to allow 70% metal on the stadium field house at Southside High School's football field.
+Bid Review - Wastewater Treatment Plant Upgrade.
+6.3
+David Hamer to request a variance to waive Sec.107-9 (2) of the Code of Ordinances to allow a limestone driveway around the east side of Southside High School's stadium.
+6.4
+Joshua Phillips to request the following variances for a RV/Boat Storage facility to be located at 121 Iberia St.:
+1. Waive Sec. 130-5, to allow a reduction in the rear setback from 50' to 45'.
+2. Waive Sec. 107-9 (1), to allow a reduction in the asphalt requirement to include only the first 20' past the gate or alternatively to waive Sec. 107-9 (2), to allow gravel between dual driveways in lieu of greenspace.
+3. Waive Sec. 130-5 (p) (5), to allow exterior roll-up doors.
+4. Waive Sec. 107-5 (a) & 130-5 (p) (1), to allow a reduction in the facade requirement.
+5. Waive Sec. 107-7 (a), to allow a modification to the 10% landscaping requirement in front of building.
+6.5
+Presentation on Youngsville's designation as a Louisiana Development Ready Community.
+6.6
+Councilwoman Simone B. Champagne to hold discussion on proposing the division of the City of Youngsville into municipal districts.
 7.
 RESOLUTIONS
 7.1
-Resolution No. 2025-15
-- A Resolution authorizing and directing the Mayor to execute for an on behalf of the City of Youngsville of the Parish of Lafayette, Louisiana, an Act of Substantial Completion from Southern Constructors, LLC, contractor, pertaining to the completion of a contract for Pump Station #3 Upgrade.
+Resolution No. 2025-17
+- A Resolution authorizing and directing the Mayor to execute for and on behalf of the City of Youngsville of the Parish of Lafayette, Louisiana, an Act of Substantial Completion from Glenn Lege Construction, LLC, Contractor, pertaining to the completion of a contract for Fortune Road Pavement Preservation Project, State Project No. H.012868.
 7.2
-Resolution No. 2025-16
-- A Resolution of the City of Youngsville declaring movable property as surplus and further authorizing the demolishment and disposal in accordance with State law.
+Resolution No. 2025-18
+- A Resolution authorizing the Mayor to negotiate and execute an addendum to a Cooperative Endeavor Agreement with Lafayette Charter Foundation, Inc. for School Resource Officers for 2025-2026.
+7.3
+Resolution No. 2025-19
+- A Resolution adopting the Louisiana Compliance Questionnaire for Audit Engagement for the City of Youngsville for fiscal year ending June 30, 2025.
+7.4
+Resolution No. 2025-20
+- A Resolution authorizing and directing the Mayor to execute for an on behalf of the City of Youngsville of the Parish of Lafayette, Louisiana, an Act of Substantial Completion from Glenn Lege Construction, LLC, pertaining to the completion of a contract for the 2024 Roadway Improvement Program, and further amending the 2025-2026 Capital Projects Fund Budget.
 8.
 ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
 8.1
-Ordinance No. 462.1-2025
-- An Ordinance repealing Ordinance No. 462-2021 and enacting a new salary schedule and pay plan for the enforcement officers of the City of Youngsville Police Department.
+Ordinance No. 498-2025
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 155 “Traditional Neighborhood Development" to amend design standards for Traditional Neighborhood Developments.
+Note - Request for a motion to withdraw from agenda.
 8.2
-Ordinance No. 506-2025
-- An Ordinance of the City of Youngsville, Louisiana, amending the Code of Ordinances Chapter 115 “Flood Damage Prevention", Article V "Provisions for Flood Hazard Reduction" to fulfill prerequisites of the CRS Program.
+Ordinance No. 503-2025
+- An Ordinance of the City of Youngsville, Louisiana amending Chapter 20 "Taxation" Article III "Sales and Use Tax".
+Note - Request for a motion to withdraw from agenda.
 9.
-MAYOR & COUNCIL ANNOUNCEMENTS
+ORDINANCES FOR INTRODUCTION
 9.1
-Mayor/Staff Announcements
+Ordinance No. 498-2025
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 155 “Traditional Neighborhood Development" to amend design standards for Traditional Neighborhood Developments.
 9.2
-Council Announcements
+Ordinance No. 503-2025
+- An aggregate amendment and revisions of the City of Youngsville, State of Louisiana's and Youngsville Sales Tax District No. 1's Sales and and Use Tax Ordinances totaling 3.50%.
+9.3
+Ordinance No. 507-2025
+- An Ordinance of the City of Youngsville establishing and recognizing a Fire Prevention Bureau within the Youngsville Volunteer Fire Department.
 10.
-ADJOURNMENT
+MAYOR & COUNCIL ANNOUNCEMENTS
 10.1
+Mayor/Staff Announcements
+10.2
+Council Announcements
+11.
+ADJOURNMENT
+11.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 

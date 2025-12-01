@@ -1,43 +1,48 @@
 SOURCE: HTML Agenda
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=95a2cf2e7973428282aaf06a63f114d6&ip=false
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=74bf07bd1029471d9024641a4f891a36&ip=false
 ================================================================================
 
 1.
 OPENING
 1.1
-Invocation led by Pastor Chris Williams, The Pentecostals of Youngsville
+Invocation led by Pastor Joe Cormier, First Assembly Youngsville
 1.2
-Pledge of Allegiance led by Lindy Bolgiano
+Pledge of Allegiance led by Jamie Creed
 2.
 ROLL CALL
 3.
 MINUTES
 3.1
-Approval of April 11, 2024 meeting minutes
+Approval of May 9, 2024 meeting minutes
 4.
 FINANCE REPORT
 4.1
-Approval of March 2024 finance report
+Approval of April 2024 finance report
 5.
 OTHER BUSINESS
 5.1
-Cole Lusby & Marcus Trahan to request a setback variance for the development & the division of 608 Avenue B into 3 lots.
-5.2
-Bree Comeaux, Ole Glory CrossFit Gym to request a variance to the land use regulations to allow a reduction in the green belt, located at 2034 Bonin Rd.
-5.3
 Bid Review - Youngsville Water Treatment Plant
+5.2
+Approve The Daily Advertiser as the Official Journal for the City of Youngsville for Fiscal Year 2024-2025 as required by R.S.43:141(A).
+5.3
+Michael Chappelle to request a variance to Section 110-4 "Design standards and incentives." for future Multi-Family Developments (Low Density) located at:
+1. 100 Eugene St. - for Subsection II. (b)(2)(a), (b)(3)(b) and (b)(19)(b); and
+2. 703 Church St. - for Subsection II. (b)(2)(a), (b)(3)(b), (b)(4) and (b)(19)(b).
 5.4
-Michael Shamsie - Request approval to begin annexation of 196 acre development located in the 500 block of Chemin Agreable.
+Nicole Reason to request for a variance to allow a 5' reduction in the rear setback for the installation of a swimming pool, located at 101 Grimmon Rd.
 6.
 RESOLUTIONS
 6.1
-Resolution No. 2024-07
-- A Resolution adopting rules and procedures relative to the American with Disabilities Act (ADA).
+Resolution No. 2024-09
+- A Resolution to adopt the 2023-2024 Municipal Water Pollution Prevention Plan for the Youngsville Wastewater Treatment Facility LPDES Permit Number LA0055328.
 6.2
-Resolution No. 2024-08
-- A Resolution authorizing the Mayor of the City of Youngsville to execute an amendment to a Wholesale Water Agreement with Lafayette City-Parish Consolidated Government to provide service to an unincorporated portion of Metairie Place Subdivision.
+Resolution No. 2024-10
+- A Resolution Endorsing and Supporting Louisiana Economic Development's (LED'S) Louisiana Development Ready Communities Program.
+6.3
+Resolution No. 2024-11
+- A Resolution of the City of Youngsville authorizing the Mayor to negotiate and accept the donation of immovable property, a 6.82 acre lot from DLM Holdings of Wyoming, LLC.
 7.
-ORDINANCES FOR INTRODUCTION
+ORDINANCES FOR FINAL ADOPTION
 7.1
 Ordinance No. 489-2024
 - An Ordinance of the City of Youngsville, Louisiana amending Chapter 24 "Utilities" of the Code of Ordinances, establishing the requirements for permitting directional boring operations.
@@ -45,14 +50,22 @@ Ordinance No. 489-2024
 Ordinance No. 357.2-2024
 - An Ordinance amending Ordinance No. 357.1-2013 performance land use regulations within the city limits of the City of Youngsville, Louisiana.
 8.
-MAYOR & COUNCIL ANNOUNCEMENTS
+ORDINANCES FOR INTRODUCTION
 8.1
-Mayor/Staff Announcements
+Budget Amendment Ordinance No. 490-2024
+- An Ordinance amending the Annual Operating Budget of Revenues and Expenditures for the City of Youngsville, Louisiana for Fiscal Year 2023-2024.
 8.2
-Council Announcements
+Budget Ordinance No. 491-2024
+- An Ordinance Adopting the Annual Operating Budget of Revenues and Expenditures for the City of Youngsville, Louisiana for Fiscal Year 2024-2025.
 9.
-ADJOURNMENT
+MAYOR & COUNCIL ANNOUNCEMENTS
 9.1
+Mayor/Staff Announcements
+9.2
+Council Announcements
+10.
+ADJOURNMENT
+10.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 

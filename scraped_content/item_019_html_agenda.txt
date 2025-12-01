@@ -1,53 +1,74 @@
 SOURCE: HTML Agenda
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=06b791ea30ce4ce9b7703a4ee1b8055c&ip=false
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=1aaee08650a24ee888bf120fdcda2979&ip=false
 ================================================================================
 
 1.
-OPENING
-1.1
-Invocation led by Pastor Andy Tribe, Youngsville Community Church
-1.2
-Pledge of Allegiance led by Lindy Bolgiano.
+CALL TO ORDER
 2.
-ROLL CALL
+OPENING
+2.1
+Invocation led by Pastor Joshua Leblanc, Youngsville Police Department Chaplain
+2.2
+Pledge of Allegiance led by Club Scout Pack 457
 3.
-RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
-3.1
-Mark Simon to address the Council on an easement associated with a re-partition of property located at 813 Young Street.
-3.2
-Krewe De Acadian and Krewe La Vie Doux to announce the BYOB (Bringing You Our Burgers) Hamburger & Hotdog Festival to be held on Sunday, April 13th at the Youngsville Sports Complex - Amphitheatre.
-3.3
-Presentation of 2025 Youngsville Mardi Gras Awards: Best Original Float - #17 Krewe de Petz; Prettiest Float - #23 The Dugas Crew; Most Spirted Float - #54 Krewe de Cane.
+ROLL CALL
 4.
-MINUTES
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
 4.1
-Approval of February 13, 2025 meeting minutes
+Presentation on proposed development, Bailey Grove.
 5.
-FINANCE REPORT
+MINUTES
 5.1
-Approval of January 2025 finance report
+Approval of March 13, 2025 meeting minutes
 6.
-PRELIMINARY PLATS (PUBLIC HEARING/ACTION)
+FINANCE REPORT
 6.1
-Request for Preliminary Plat approval to subdivide 703 Church Street into Lots 1-A and 1-B, located in Section 7, T11S, R5E.
+Approval of February 2025 finance report
 7.
 OTHER BUSINESS
 7.1
-Appointment to the Youngsville Municipal Police Civil Service Board, representing the College List Board Member, for a three-year term, from a list of applicants submitted by Dr. E. Joseph Savoie, President of the University of Louisiana at Lafayette, in a letter dated February 5, 2025.
+Presentation and acceptance of Audit Report for Fiscal Year ending June 30, 2024 - Burton Kolder (Kolder, Slaven & Company, LLC)
+7.2
+Discuss and consider a variance to waive the façade requirements in Section 107-5(a)(a) and (a)(d) of the Code of Ordinances for a field storage building at Southside High School's football field.
+7.3
+Jennifer Copell to request a variance to reduce the western side setback from 5' to 2.5' for a daiquiri shop to be located at 2800 E Milton Ave.
+7.4
+Reggie Baudoin to request a variance to reduce the rear setback from 10' to 7'.9" for a swimming pool to be located at 103 Sago Palm Ct.
 8.
-RESOLUTIONS
+PRELIMINARY PLATS (PUBLIC HEARING/ACTION)
 8.1
-Resolution No. 2025-06
-- A Resolution of the City of Youngsville declaring movable property as surplus and further authorizing disposal in accordance with state law.
+Request for Preliminary Plat approval of Mon Cherie, Phase II, located in Section 19, T11S, R5E.
 9.
-MAYOR & COUNCIL ANNOUNCEMENTS
+RESOLUTIONS
 9.1
-Mayor/Staff Announcements
+Resolution No. 2025-07
+- A Resolution of the City of Youngsville rescinding Resolution No. 2025-05 and declaring movable property as surplus & further authorizing disposal in accordance with state law.
 9.2
-Council Announcements
+Resolution No. 2025-08
+- A Resolution levying the millage rates for 2025.
 10.
-ADJOURNMENT
+ORDINANCES FOR INTRODUCTION
 10.1
+Ordinance No. 367.1-2025
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 20 "Taxation", Article II. "Hotel Occupancy Tax", Section 20-19 "Tax Levied" to address short-term rentals.
+10.2
+Ordinance No. 498-2025
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 155 “Traditional Neighborhood Development" to amend design standards for Traditional Neighborhood Developments.
+10.3
+Ordinance No. 499-2025
+- An Ordinance of the City of Youngsville, Louisiana, amending the Code of Ordinances, Chapter 12 "Nuisances" Article IV "Junked Motor Vehicles", Section 12-140 "Definitions" to revise junked items.
+10.4
+Ordinance No. 500-2025
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 2 "Administration", Section 2-1. "Court Costs", to establish rules for Mayor's Court.
+11.
+MAYOR & COUNCIL ANNOUNCEMENTS
+11.1
+Mayor/Staff Announcements
+11.2
+Council Announcements
+12.
+ADJOURNMENT
+12.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 

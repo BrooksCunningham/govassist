@@ -1,66 +1,61 @@
 SOURCE: HTML Agenda
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=9f740e7fb5ea4ebdafb8fd4aff6ef7f2&ip=false
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=8a9812894fcd4413925bba8e27b943b2&ip=false
 ================================================================================
 
 1.
 OPENING
 1.1
-Invocation led by Pastor Travis Minnich, First Assembly Youngsville.
+Invocation led by Pastor Chris Fuselier, First Baptist Church.
 1.2
-Pledge of Allegiance led by Nicholas Niland.
+Pledge of Allegiance led by Girl Scout troop #1118.
 2.
 ROLL CALL
 3.
 RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
 3.1
-Francis Touchet, Jr., Superintendent of Lafayette Parish School System to provide a quarterly update.
+Pastor Joe Cormier, First Assembly Church to announce Christmas Under the Stars event.
+3.2
+McBade Engineers & Consultants, LLC - presentation on pedestrian and parking enhancements for Sugar Mill Pond.
+3.3
+Lafayette Parish Councilman Ken Stansbury, District 3, to discuss the tax renewal proposal.
 4.
 MINUTES
 4.1
-Approval of September 11, 2025 meeting minutes.
+Approval of October 9, 2025, meeting minutes.
 5.
 FINANCE REPORT
 5.1
-Approval of August 2025 finance report.
+Approval of September 2025 finance report.
 6.
-OTHER BUSINESS
-6.1
-Chris Lafleur to request a variance to Section 105-73 (b) (4) to allow encroachment within the utility easement along Braham Dr., for a proposed building addition located at 115 Guernsey Ln.
-6.2
-David Robichaux to request a variance to Section 107-9 (4) to allow a reduction in the driveway width & radius for a proposed apartment building to be located at 110 Oceans Blvd.
-6.3
-John Harvey to request the following variances for the subdivision of a parcel into two lots, located at 100 Eugene St.:
-1. Waive Section 110-4 (I.)(b)(1), to eliminate the requirement of the lot size.
-2. Waive Section 110-4 (I.)(b)(2), to eliminate the requirement of the lot width.
-7.
 PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+6.1
+Request for Preliminary Plat approval of the re-subdivision of Tract G-1-C and portion of Tract H into Lot 1, 2 & 3, a residential subdivision for Chemet Properties, LLC, located in Section 1, T11S, R4E.
+7.
+OTHER BUSINESS
 7.1
-Request for Preliminary Plat approval of a partition of Lot 7-A of Block 9 creating Lots 7-A-1 and 7-A-2 for John Harvey, located in Section 79, T7S, R3E.
+Bid Review - Hwy. 92 Improvements
+7.2
+Bid Review - Langlinais Road Extension (Southern East-West Connector/Chemin Agreable Roadway Improvements)
 8.
 RESOLUTIONS
 8.1
-Resolution No. 2025-23
-- A Resolution authorizing the Mayor to enter into an Intergovernmental Cooperative Endeavor Agreement with the LA Department of Transportation and Development for the transfer of the ownership, operation, and maintenance of a portion of state route LA 92-1 (known as Young Street) from its junction with the local road known as Larriviere Road proceeding east approximately 0.200 miles to the City of Youngsville corporate limits.
+Resolution No. 2025-25
+- A Resolution authorizing submittal of Water Sector Program Phase 2 grant application, approving local match and entering into agreements associated with engineering services.
 8.2
-Resolution No. 2025-24
-- A Resolution authorizing the Mayor of the City of Youngsville to execute a Cooperative Endeavor Agreement and all necessary documentation between the Louisiana Department of Treasury, State of Louisiana, and the City of Youngsville to an appropriation from ACT 461 of the 2025 Regular Legislative Session for road improvements.
+Resolution No. 2025-26
+- A Resolution of the City of Youngsville declaring movable property as surplus and further authorizing disposal in accordance with State law.
+8.3
+Resolution No. 2025-27
+- A Resolution requesting financial assistance from the State of Louisiana under the fiscal year 2025-2026 Local Government Assistance Program and Community Water Enrichment Fund Program.
 9.
-ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
-9.1
-Ordinance No. 498-2025
-- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances, Chapter 155 "Traditional Neighborhood Development" to amend design standards for Traditional Neighborhoods Developments.
-9.2
-Ordinance No. 397.1-2025
-- An Ordinance amending Chapter 107 "Commercial Development Requirements", Section 107-5. "Architecture" to revise the acceptable building materials for exterior walls.
-10.
 MAYOR & COUNCIL ANNOUNCEMENTS
-10.1
+9.1
 Mayor/Staff Announcements
-10.2
+9.2
 Council Announcements
-11.
+10.
 ADJOURNMENT
-11.1
+10.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 

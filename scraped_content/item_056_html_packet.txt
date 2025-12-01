@@ -1,81 +1,82 @@
 SOURCE: HTML Packet
-URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=5cf0cd34ffe64a32b39bd170a6b23ae1&ip=true
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=86fc7861bf144746b1dab4616200aeee&ip=true
 ================================================================================
 
 1.
 OPENING
 1.1
-Invocation led by Pastor Chris Fuselier, First Baptist Church
+Invocation led by Pastor Joe Cormier, First Assembly Youngsville
 1.2
-Pledge of Allegiance led by Jamie Creed
+Pledge of Allegiance led by Simone Champagne
 2.
 ROLL CALL
 3.
-MINUTES
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
 3.1
-Approval of December 14, 2023 regular meeting minutes
-2023-12-14 Minutes.pdf
+Chief Louviere to recognize Youngsville Police Officers
+3.2
+Francis Touchet, Jr., Superintendent of Lafayette Parish School System to provide a quarterly update.
+4.
+MINUTES
+4.1
+Approval of January 11, 2024 regular meeting minutes
+2024.1.11 Minutes.pdf
 (0.04
 MB)
-4.
-FINANCE REPORT
-4.1
-Approval of November 2023 finance report
-2024.1.14 Finance Report.pdf
-(1.15
-MB)
 5.
-OTHER BUSINESS
+FINANCE REPORT
 5.1
-Presentation and acceptance of Audit Report for Fiscal Year ending June 30, 2023 - Burton Kolder (Kolder, Slaven & Company, LLC)
-5.2
-C'est Bon Storage to request a variance to Section 107-5 (a)(a) to allow a super polymer grade vinyl siding to the East and South sides of the facility, located at 461 Almonaster Road.
-Waiver Letter for C'est Bon Storage.pdf
-(3.92
-MB)
-Sec._107_5.___Architecture..pdf
-(0.12
+Approval of December 2023 Finance report
+2024.2.8 Finance Report.pdf
+(1.12
 MB)
 6.
-RESOLUTIONS
+OTHER BUSINESS
 6.1
-Resolution No. 2024-01
-- A Resolution authorizing the acceptance of a donation of movable surplus property from the Lafayette Police Department.
-Reso. No. 2024-01 Acceptance of surplus motorcycle.pdf
-(0.01
+Consider amending the 2023-2024 Youngsville Police Department Budget in the amount of $33,000 to facilitate funding for security system upgrades at the 304 Fourth Street facility.
+YPD Budget Amendment.pdf
+(0.16
 MB)
 7.
-ORDINANCES FOR INTRODUCTION
+RESOLUTIONS
 7.1
-Ordinance No. 488-2024
-- An Ordinance of the City of Youngsville, Louisiana amending Section 24-23 "Rates Established" prescribing the rates, charges, and deposits for water, sewage, solid waste and recycling service accounts services by the City of Youngsville, Louisiana.
-Ord. No. 488-2024 Amendement Chpt 24 Utilities Fees.pdf
-(0.03
+Resolution No. 2024-02
+- A Resolution authorizing and directing the mayor to execute for and on behalf of the City of Youngsville of the Parish of Lafayette, Louisiana, an Act of Substantial Completion from Griner Drilling Services, Inc. Contractor, pertaining to the completion of a contract for Water Well No. 9.
+Letter to Mayor recommending acceptance of Water Well 9 w punch list.pdf
+(1.32
+MB)
+Resolution No 2024-02-Acceptance of Water Well 9.pdf
+(0.02
 MB)
 8.
-MAYOR & COUNCIL ANNOUNCEMENTS
+ORDINANCES FOR FINAL ADOPTION
 8.1
+Amended Ordinance No. 488-2024
+- An Ordinance of the City of Youngsville, Louisiana amending Section 24-23 "Rates Established" prescribing the rates, charges, and deposits for water, sewage, solid waste and recycling service accounts services by the City of Youngsville, Louisiana.
+Ord. No. 488-2024 Amendment Chpt 24 Utility Fees.pdf
+(0.09
+MB)
+9.
+MAYOR & COUNCIL ANNOUNCEMENTS
+9.1
 Mayor/Staff Announcements
-2024.1.14 Sports Complex Notes.pdf
+2024.2.8 Sports Complex Report.pdf
 (0.02
 MB)
-2024.1.14 Engineering Report.pdf
+2024.2.8 Engineer Report.pdf
 (0.10
 MB)
-2024.1.14 DSA Report.pdf
+DSA project status January 2024.pdf
 (0.02
 MB)
-2024.1.14 Neel Schaffer Report.pdf
-(0.18
+2024.2.8 Fenstermaker Report.pdf
+(0.13
 MB)
-2024.1.14 Fenstermaker Report.pdf
-(0.15
-MB)
-8.2
+9.2
 Council Announcements
-9.
+10.
 ADJOURNMENT
-9.1
+10.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 
