@@ -6,6 +6,7 @@ Combines into a single file for NotebookLM
 """
 
 import os
+import re
 import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
@@ -77,8 +78,38 @@ def extract_text_content(html_content):
     return '\n'.join(lines)
 
 
+def parse_alt_text(alt_text):
+    """
+    Parse the alt text to extract date, meeting type, and document type.
+    Example: "HTML Agenda for November 13, 2025 City Council Regular Meeting at 6:00 PM"
+    Returns: (doc_type, meeting_info) where meeting_info includes date and meeting description
+    """
+    # Determine document type based on TARGET_LINK_TEXTS
+    doc_type = None
+    for target in TARGET_LINK_TEXTS:
+        if alt_text.startswith(target):
+            doc_type = target
+            break
+    
+    if not doc_type:
+        return None, None
+    
+    # Extract meeting info (everything after "for ")
+    # Use dynamic regex based on the detected doc_type
+    pattern = rf'{re.escape(doc_type)} for (.+)'
+    match = re.match(pattern, alt_text)
+    if match:
+        meeting_info = match.group(1).strip()
+    else:
+        meeting_info = alt_text.replace(doc_type, '').strip()
+        if meeting_info.startswith('for '):
+            meeting_info = meeting_info[4:]
+    
+    return doc_type, meeting_info
+
+
 def find_target_links(html_content):
-    """Find all HTML Packet and HTML Agenda links"""
+    """Find all HTML Packet and HTML Agenda links with full meeting information"""
     soup = BeautifulSoup(html_content, 'html.parser')
     target_links = []
 
@@ -95,14 +126,37 @@ def find_target_links(html_content):
             for target in TARGET_LINK_TEXTS:
                 if alt_text.startswith(target):
                     absolute_url = link['href']
+                    doc_type, meeting_info = parse_alt_text(alt_text)
                     target_links.append({
                         'url': absolute_url,
-                        'text': target
+                        'text': target,
+                        'full_alt_text': alt_text,
+                        'meeting_info': meeting_info or 'Unknown Meeting'
                     })
-                    print(f"  Found: {target} -> {absolute_url}")
+                    print(f"  Found: {alt_text}")
                     break
 
     return target_links
+
+
+def sanitize_filename(text, max_length=100):
+    """
+    Sanitize text for use as a filename.
+    Removes/replaces characters that are not safe for filenames.
+    """
+    # Replace common problematic characters
+    sanitized = text.replace(':', '').replace(',', '').replace('/', '-')
+    sanitized = sanitized.replace('\\', '-').replace('?', '').replace('*', '')
+    sanitized = sanitized.replace('"', '').replace('<', '').replace('>', '')
+    sanitized = sanitized.replace('|', '-')
+    # Replace spaces with underscores
+    sanitized = sanitized.replace(' ', '_')
+    # Remove any remaining non-alphanumeric characters except underscore, dash, and period
+    sanitized = re.sub(r'[^\w\-.]', '', sanitized)
+    # Truncate if too long
+    if len(sanitized) > max_length:
+        sanitized = sanitized[:max_length]
+    return sanitized
 
 
 def process_links(links):
@@ -110,8 +164,10 @@ def process_links(links):
     for idx, link_info in enumerate(links, start=1):
         url = link_info['url']
         link_text = link_info['text']
+        meeting_info = link_info.get('meeting_info', 'Unknown Meeting')
+        full_alt_text = link_info.get('full_alt_text', link_text)
 
-        print(f"\n[{idx}/{len(links)}] Processing: {link_text}")
+        print(f"\n[{idx}/{len(links)}] Processing: {full_alt_text}")
 
         # Fetch the page
         html_content = fetch_page(url)
@@ -122,12 +178,20 @@ def process_links(links):
         # Extract text
         text_content = extract_text_content(html_content)
 
-        # Create filename
-        filename = f"item_{idx:03d}_{link_text.lower().replace(' ', '_')}.txt"
+        # Create descriptive filename with meeting info and document type
+        doc_type_short = 'agenda' if 'Agenda' in link_text else 'packet'
+        descriptive_name = sanitize_filename(f"{meeting_info}_{doc_type_short}")
+        filename = f"{descriptive_name}.txt"
         filepath = SCRAPED_DIR / filename
 
-        # Add header to content
-        content_with_header = f"SOURCE: {link_text}\nURL: {url}\n{'='*80}\n\n{text_content}\n\n"
+        # Add enhanced header to content with full meeting information
+        header_lines = [
+            f"DOCUMENT TYPE: {link_text}",
+            f"MEETING: {meeting_info}",
+            f"URL: {url}",
+            '=' * 80,
+        ]
+        content_with_header = '\n'.join(header_lines) + f"\n\n{text_content}\n\n"
 
         # Save to file
         filepath.write_text(content_with_header, encoding='utf-8')
