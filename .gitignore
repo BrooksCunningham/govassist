@@ -164,3 +164,4 @@ audio_extracts/Multimedia_*
 
 # Test files for scraper
 test_page.html
+scraped_content_backup/

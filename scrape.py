@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 from urllib.parse import urljoin
 import time
+from datetime import datetime
 
 # Configuration
 # This is the municode iframe URL that contains the meeting list
@@ -78,6 +79,50 @@ def extract_text_content(html_content):
     return '\n'.join(lines)
 
 
+def convert_to_iso8601_datetime(meeting_info):
+    """
+    Convert meeting info to ISO 8601 Extended Format.
+    Example: "November 13, 2025 City Council Regular Meeting at 6:00 PM"
+    Returns: "2025-11-13T18:00 City Council Regular Meeting" (date and time in ISO 8601 format)
+    """
+    # Pattern to match: "Month Day, Year ... at H:MM AM/PM"
+    # Groups: (1)month_name (2)day (3)year (4)meeting_description (5)hour (6)minute (7)AM/PM
+    pattern = r'([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})\s+(.*?)\s+at\s+(\d{1,2}):(\d{2})\s+(AM|PM)'
+    match = re.match(pattern, meeting_info)
+    
+    if not match:
+        # If pattern doesn't match, return original
+        return meeting_info
+    
+    month_name, day, year, meeting_desc, hour, minute, am_pm = match.groups()
+    
+    # Convert month name to number
+    try:
+        month_num = datetime.strptime(month_name, '%B').month
+    except ValueError:
+        # If full month name doesn't work, try abbreviated
+        try:
+            month_num = datetime.strptime(month_name, '%b').month
+        except ValueError:
+            # If still doesn't work, return original
+            return meeting_info
+    
+    # Convert 12-hour time to 24-hour time
+    hour_int = int(hour)
+    if am_pm == 'PM' and hour_int != 12:
+        hour_int += 12
+    elif am_pm == 'AM' and hour_int == 12:
+        hour_int = 0
+    
+    # Format in ISO 8601 Extended Format
+    iso_date = f"{year}-{month_num:02d}-{int(day):02d}"
+    iso_time = f"{hour_int:02d}:{minute}"
+    iso_datetime = f"{iso_date}T{iso_time}"
+    
+    # Return formatted string with meeting description
+    return f"{iso_datetime} {meeting_desc.strip()}"
+
+
 def parse_alt_text(alt_text):
     """
     Parse the alt text to extract date, meeting type, and document type.
@@ -104,6 +149,9 @@ def parse_alt_text(alt_text):
         meeting_info = alt_text.replace(doc_type, '').strip()
         if meeting_info.startswith('for '):
             meeting_info = meeting_info[4:]
+    
+    # Convert meeting_info to ISO 8601 format
+    meeting_info = convert_to_iso8601_datetime(meeting_info)
     
     return doc_type, meeting_info
 
@@ -216,7 +264,7 @@ def combine_files():
     combined_content.append("=" * 80)
     combined_content.append("YOUNGSVILLE LIVESTREAM MEETING DOCUMENTS")
     combined_content.append(f"Scraped from: {BASE_URL}")
-    combined_content.append(f"Generated: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+    combined_content.append(f"Generated: {datetime.now().astimezone().isoformat()}")
     combined_content.append("=" * 80)
     combined_content.append("\n\n")
 
