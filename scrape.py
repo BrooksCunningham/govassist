@@ -86,6 +86,7 @@ def convert_to_iso8601_datetime(meeting_info):
     Returns: "2025-11-13T18:00 City Council Regular Meeting" (date and time in ISO 8601 format)
     """
     # Pattern to match: "Month Day, Year ... at H:MM AM/PM"
+    # Groups: (1)month_name (2)day (3)year (4)meeting_description (5)hour (6)minute (7)AM/PM
     pattern = r'([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})\s+(.*?)\s+at\s+(\d{1,2}):(\d{2})\s+(AM|PM)'
     match = re.match(pattern, meeting_info)
     
