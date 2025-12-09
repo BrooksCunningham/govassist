@@ -6,6 +6,8 @@ import whisper
 import logging
 import inspect
 import warnings
+import re
+from datetime import datetime
 
 # --- Diagnostic Block ---
 # This block will help identify if the wrong "whisper" library is being used.
@@ -55,6 +57,68 @@ transcription_folder = 'transcriptions'
 os.makedirs(download_folder, exist_ok=True)
 os.makedirs(audio_folder, exist_ok=True)
 os.makedirs(transcription_folder, exist_ok=True)
+
+def convert_to_iso8601_datetime(meeting_info):
+    """
+    Convert meeting info to ISO 8601 Extended Format.
+    Example: "November 13, 2025 City Council Regular Meeting at 6:00 PM"
+    Returns: "2025-11-13T18:00 City Council Regular Meeting" (date and time in ISO 8601 format)
+    """
+    # Pattern to match: "Month Day, Year ... at H:MM AM/PM"
+    # Groups: (1)month_name (2)day (3)year (4)meeting_description (5)hour (6)minute (7)AM/PM
+    pattern = r'([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})\s+(.*?)\s+at\s+(\d{1,2}):(\d{2})\s+(AM|PM)'
+    match = re.match(pattern, meeting_info)
+    
+    if not match:
+        # If pattern doesn't match, return original
+        return meeting_info
+    
+    month_name, day, year, meeting_desc, hour, minute, am_pm = match.groups()
+    
+    # Convert month name to number
+    try:
+        month_num = datetime.strptime(month_name, '%B').month
+    except ValueError:
+        # If full month name doesn't work, try abbreviated
+        try:
+            month_num = datetime.strptime(month_name, '%b').month
+        except ValueError:
+            # If still doesn't work, return original
+            return meeting_info
+    
+    # Convert 12-hour time to 24-hour time
+    hour_int = int(hour)
+    if am_pm == 'PM' and hour_int != 12:
+        hour_int += 12
+    elif am_pm == 'AM' and hour_int == 12:
+        hour_int = 0
+    
+    # Format in ISO 8601 Extended Format
+    iso_date = f"{year}-{month_num:02d}-{int(day):02d}"
+    iso_time = f"{hour_int:02d}:{minute}"
+    iso_datetime = f"{iso_date}T{iso_time}"
+    
+    # Return formatted string with meeting description
+    return f"{iso_datetime} {meeting_desc.strip()}"
+
+def sanitize_filename(text, max_length=100):
+    """
+    Sanitize text for use as a filename.
+    Removes/replaces characters that are not safe for filenames.
+    """
+    # Replace common problematic characters
+    sanitized = text.replace(':', '').replace(',', '').replace('/', '-')
+    sanitized = sanitized.replace('\\', '-').replace('?', '').replace('*', '')
+    sanitized = sanitized.replace('"', '').replace('<', '').replace('>', '')
+    sanitized = sanitized.replace('|', '-')
+    # Replace spaces with underscores
+    sanitized = sanitized.replace(' ', '_')
+    # Remove any remaining non-alphanumeric characters except underscore, dash, and period
+    sanitized = re.sub(r'[^\w\-.]', '', sanitized)
+    # Truncate if too long
+    if len(sanitized) > max_length:
+        sanitized = sanitized[:max_length]
+    return sanitized
 
 def download_file(url, filename):
     """Downloads a file from a URL using a streaming request for efficiency."""
@@ -145,9 +209,20 @@ def process_page(page_number):
         base_filename = ""
 
         if img_tag and 'alt' in img_tag.attrs:
-            # Sanitize filename from the image's alt text for better readability.
-            sanitized_name = img_tag['alt'].replace(' ', '_').replace(':', '').replace(',', '')
-            base_filename = f"{sanitized_name}"
+            # Get alt text (e.g., "Multimedia for November 13, 2025 City Council Regular Meeting at 6:00 PM")
+            alt_text = img_tag['alt']
+            
+            # Extract meeting info after "Multimedia for " or similar prefix
+            if 'for ' in alt_text:
+                meeting_info = alt_text.split('for ', 1)[1]
+                # Convert to ISO 8601 format
+                iso_formatted = convert_to_iso8601_datetime(meeting_info)
+                # Sanitize for use as filename
+                base_filename = sanitize_filename(iso_formatted)
+            else:
+                # Fallback to basic sanitization if pattern doesn't match
+                sanitized_name = img_tag['alt'].replace(' ', '_').replace(':', '').replace(',', '')
+                base_filename = f"{sanitized_name}"
         else:
             # Create a fallback name from the URL if no alt text is available.
             base_filename = os.path.splitext(os.path.basename(video_url))[0]
