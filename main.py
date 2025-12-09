@@ -95,11 +95,11 @@ def convert_to_iso8601_datetime(meeting_info):
     
     # Format in ISO 8601 Extended Format
     iso_date = f"{year}-{month_num:02d}-{int(day):02d}"
-    iso_time = f"{hour_int:02d}{minute}"
+    iso_time = f"{hour_int:02d}:{minute}"
     iso_datetime = f"{iso_date}T{iso_time}"
     
     # Return formatted string with meeting description
-    return f"{iso_datetime}_{meeting_desc.strip()}"
+    return f"{iso_datetime} {meeting_desc.strip()}"
 
 def sanitize_filename(text, max_length=100):
     """
