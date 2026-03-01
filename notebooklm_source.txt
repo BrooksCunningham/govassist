@@ -1,7 +1,7 @@
 ================================================================================
 YOUNGSVILLE LIVESTREAM MEETING DOCUMENTS
 Scraped from: https://meetings.municode.com/PublishPage/index?cid=YOUNGSVILA&ppid=5d44059a-1e19-4452-a226-babc4b369c18&p={}
-Generated: 2026-02-01T01:21:03.011978+00:00
+Generated: 2026-03-01T01:19:36.894617+00:00
 ================================================================================
 
 
@@ -2754,6 +2754,277 @@ Council Announcements
 10.
 ADJOURNMENT
 10.1
+Adjourn Meeting
+In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
+
+
+
+================================================================================
+
+
+DOCUMENT TYPE: HTML Agenda
+MEETING: 2026-02-12T18:00 City Council Regular Meeting
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=ddeda4d873ed48fda1f3167cfa8748c4&ip=false
+================================================================================
+
+1.
+OPENING
+1.1
+Invocation led by Pastor Chris Fuselier, First Baptist Church
+1.2
+Pledge of Allegiance led by Lindy Bolgiano.
+2.
+ROLL CALL
+3.
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
+3.1
+Charles Hebert with Lafayette Parish LSU AgCenter to provide an annual update.
+3.2
+Lance Strother to announce Hopefest Music Festival and 5K on March 21, 2026.
+4.
+MINUTES
+4.1
+Approval of January 8, 2025 meeting minutes.
+5.
+FINANCE REPORT
+5.1
+Approval of December 2025 finance report.
+6.
+PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+6.1
+Request for Preliminary Plat approval of Tracts D-1 & D-2 of Forest Viator Division, commercial/residential mixed use lots, located in Section 7, T11S, R5E.
+6.2
+Request for Preliminary Plat approval to create Lot 1 & Lot 2 of Cajun Play, LLC Subdivision & Private Right of Passage, located in Section 1, T11S, R4E.
+7.
+OTHER BUSINESS
+7.1
+Jennifer Trahan with Years to Grow to request a variance to allow the addition of portable buildings at 1306 Fortune Rd.
+7.2
+Josh Abshire to request a variance to allow a reduction in the east side setback by 8' 5" for a future automotive repair business to be located at 808 Church St.
+7.3
+Brady Thibodeaux to request a variance to the Commercial Development Requirements and Land Use Regulations to allow a commercial business to operate within his residence at 333 Forest Grove.
+7.4
+B & B Contractors, Inc. to request a variance to allow a reduction in the front setback by 5' for 205 Queenstown Ave.
+7.5
+Meredith Guidry to request a variance to Sec. 107-5 (a) (a) to allow metal siding on the exterior walls to match existing architecture, for Ascension Episcopal School Baseball Field House.
+7.6
+Mr. Cliffton Adkins to request a release of property bound by A, B, C, and D for a future road, as shown on a final plat dated 5.9.2006, to be sold as a residential lot on Beacon Drive within Shadowbrook, Phase II.
+8.
+RESOLUTIONS
+8.1
+Resolution No. 2026-02
+- A Resolution authorizing the redemption of the outstanding Excess Revenue Bond, Series 2017, of the City of Youngsville, Louisiana, and providing for other matters in connection therewith.
+8.2
+Resolution No. 2026-03
+- A Resolution amending the 2025-2026 Capital Projects Budget - YSC Parks & Recreation Fund in the amount of $140,000 to reappropriate funding from the LED Lighting - Baseball Project to a Tennis Court Lighting Project.
+8.3
+Resolution No. 2026-04
+- A Resolution amending the 2025-2026 Capital Projects Budget - YSC Parks & Recreation Fund in the amount of $37,000 to reappropriate funding from the LED Lighting - Baseball Project to a Tennis Court Surfacing Project.
+8.4
+Resolution No. 2026-05
+- A Resolution amending the 2025-2026 Capital Projects Budget - YSC Parks & Recreation Fund in the amount of $7,000 to reappropriate funding from the Expansion Maintenance Shed to the Toro Proforce Blower.
+9.
+ORDINANCES FOR INTRODUCTION
+9.1
+Ordinance No. 509-2026
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances Chapter 110 "Design Standards" and Chapter 107 "Commercial Development Requirements", as it relates to finished floor determinations for residential and commercial developments.
+9.2
+Ordinance No. 510-2026
+- An Ordinance of the City of Youngsville, Louisiana declaring movable property as surplus and further authorizing the demolishment and disposal in accordance with state law.
+10.
+MAYOR & COUNCIL ANNOUNCEMENTS
+10.1
+Mayor/Staff Announcements
+10.2
+Council Announcements
+11.
+ADJOURNMENT
+11.1
+Adjourn Meeting
+In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
+
+
+
+================================================================================
+
+
+DOCUMENT TYPE: HTML Packet
+MEETING: 2026-02-12T18:00 City Council Regular Meeting
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=ddeda4d873ed48fda1f3167cfa8748c4&ip=true
+================================================================================
+
+1.
+OPENING
+1.1
+Invocation led by Pastor Chris Fuselier, First Baptist Church
+1.2
+Pledge of Allegiance led by Lindy Bolgiano.
+2.
+ROLL CALL
+3.
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
+3.1
+Charles Hebert with Lafayette Parish LSU AgCenter to provide an annual update.
+3.2
+Lance Strother to announce Hopefest Music Festival and 5K on March 21, 2026.
+4.
+MINUTES
+4.1
+Approval of January 8, 2025 meeting minutes.
+1.8.26 Minutes.pdf
+(0.03
+MB)
+5.
+FINANCE REPORT
+5.1
+Approval of December 2025 finance report.
+2025.12.31 FINANCIALS.pdf
+(1.24
+MB)
+6.
+PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+6.1
+Request for Preliminary Plat approval of Tracts D-1 & D-2 of Forest Viator Division, commercial/residential mixed use lots, located in Section 7, T11S, R5E.
+407 Iberia St - Preliminary Plat Review.pdf
+(0.13
+MB)
+Preliminary Plat - CAMBRE2.pdf
+(0.18
+MB)
+6.2
+Request for Preliminary Plat approval to create Lot 1 & Lot 2 of Cajun Play, LLC Subdivision & Private Right of Passage, located in Section 1, T11S, R4E.
+Preliminary Plat Review 2813 E. Milton Ave - Cajun Play.pdf
+(0.15
+MB)
+2026.01.29 Preliminary Draft (Cajun Play).pdf
+(0.87
+MB)
+7.
+OTHER BUSINESS
+7.1
+Jennifer Trahan with Years to Grow to request a variance to allow the addition of portable buildings at 1306 Fortune Rd.
+Years to Grow Photo.pdf
+(0.50
+MB)
+7.2
+Josh Abshire to request a variance to allow a reduction in the east side setback by 8' 5" for a future automotive repair business to be located at 808 Church St.
+Variance - 808 CHURCH ST - AUTOMOTIVE SHOP.pdf
+(0.08
+MB)
+808 Church Aerial View.pdf
+(1.30
+MB)
+7.3
+Brady Thibodeaux to request a variance to the Commercial Development Requirements and Land Use Regulations to allow a commercial business to operate within his residence at 333 Forest Grove.
+AGENDA ITEM REQUEST FORM - 333 FOREST GROVE.pdf
+(0.08
+MB)
+EMAIL FROM ATF.pdf
+(0.18
+MB)
+Sugar Ridge Restrictions.pdf
+(0.12
+MB)
+7.4
+B & B Contractors, Inc. to request a variance to allow a reduction in the front setback by 5' for 205 Queenstown Ave.
+AGENDA ITEM REQUEST FORM - 205 QUEENSTOWN.pdf
+(0.07
+MB)
+2202-PLAN-8.5x11-SITE.pdf
+(0.22
+MB)
+205 Queenstown Builder Email.pdf
+(0.05
+MB)
+7.5
+Meredith Guidry to request a variance to Sec. 107-5 (a) (a) to allow metal siding on the exterior walls to match existing architecture, for Ascension Episcopal School Baseball Field House.
+AES Baseball Field House Agenda Item Request.pdf
+(0.08
+MB)
+EXTERIOR COLORS.pdf
+(5.77
+MB)
+OVERALL PALETTE.pdf
+(6.69
+MB)
+CD Meeting Documents.pdf
+(53.31
+MB)
+7.6
+Mr. Cliffton Adkins to request a release of property bound by A, B, C, and D for a future road, as shown on a final plat dated 5.9.2006, to be sold as a residential lot on Beacon Drive within Shadowbrook, Phase II.
+FORM Agenda Item Request-Cliffton Adkins.pdf
+(0.07
+MB)
+Shadowbrook Phase II.pdf
+(0.91
+MB)
+8.
+RESOLUTIONS
+8.1
+Resolution No. 2026-02
+- A Resolution authorizing the redemption of the outstanding Excess Revenue Bond, Series 2017, of the City of Youngsville, Louisiana, and providing for other matters in connection therewith.
+Reso. No. 2026-02 Bond Redemption, Series 2017.pdf
+(0.02
+MB)
+8.2
+Resolution No. 2026-03
+- A Resolution amending the 2025-2026 Capital Projects Budget - YSC Parks & Recreation Fund in the amount of $140,000 to reappropriate funding from the LED Lighting - Baseball Project to a Tennis Court Lighting Project.
+Reso. No. 2026-03 Amend Capital Projects Budget for Tennis Lights Grant.pdf
+(0.02
+MB)
+GEO TENNIS LED LIGHTING.pdf
+(0.26
+MB)
+2026 BIF Award Letter- RaisingCanes- LA.pdf
+(0.44
+MB)
+Raising Canes TC_ TVS Award Ltr 2026.pdf
+(0.10
+MB)
+8.3
+Resolution No. 2026-04
+- A Resolution amending the 2025-2026 Capital Projects Budget - YSC Parks & Recreation Fund in the amount of $37,000 to reappropriate funding from the LED Lighting - Baseball Project to a Tennis Court Surfacing Project.
+Reso. No. 2026-04 Amend Capital Projects Budget for Tennis Court Surfacing.pdf
+(0.02
+MB)
+Tennis Court Surfacing Contract.pdf
+(0.30
+MB)
+8.4
+Resolution No. 2026-05
+- A Resolution amending the 2025-2026 Capital Projects Budget - YSC Parks & Recreation Fund in the amount of $7,000 to reappropriate funding from the Expansion Maintenance Shed to the Toro Proforce Blower.
+Reso. No. 2026-05 Amend Capital Projects Budget for YSC reappropriation.pdf
+(0.02
+MB)
+9.
+ORDINANCES FOR INTRODUCTION
+9.1
+Ordinance No. 509-2026
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances Chapter 110 "Design Standards" and Chapter 107 "Commercial Development Requirements", as it relates to finished floor determinations for residential and commercial developments.
+Ord. No. 509-2026 Amend Code for Finished Floor Determinations.pdf
+(0.12
+MB)
+9.2
+Ordinance No. 510-2026
+- An Ordinance of the City of Youngsville, Louisiana declaring movable property as surplus and further authorizing the demolishment and disposal in accordance with state law.
+Ord. No. 510-2026 Surplus Building 1040 Iberia St.pdf
+(0.02
+MB)
+10.
+MAYOR & COUNCIL ANNOUNCEMENTS
+10.1
+Mayor/Staff Announcements
+2.12.26 Sports Complex Report.pdf
+(0.02
+MB)
+2.12.26 DSA Report.pdf
+(0.02
+MB)
+10.2
+Council Announcements
+11.
+ADJOURNMENT
+11.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 
