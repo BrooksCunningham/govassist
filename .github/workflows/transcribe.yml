@@ -35,7 +35,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      # 4. Install Python dependencies from requirements.txt
+      # 4. Install setuptools to provide pkg_resources for building openai-whisper
+      - name: Install setuptools
+        run: pip install setuptools
+
+      # 5. Install Python dependencies from requirements.txt
       #    Ensure you have a requirements.txt file in your repository
       - name: Install Python dependencies
         run: |
