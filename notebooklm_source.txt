@@ -1,7 +1,7 @@
 ================================================================================
 YOUNGSVILLE LIVESTREAM MEETING DOCUMENTS
 Scraped from: https://meetings.municode.com/PublishPage/index?cid=YOUNGSVILA&ppid=5d44059a-1e19-4452-a226-babc4b369c18&p={}
-Generated: 2026-03-01T01:19:36.894617+00:00
+Generated: 2026-04-01T01:29:18.702492+00:00
 ================================================================================
 
 
@@ -3019,6 +3019,212 @@ Mayor/Staff Announcements
 MB)
 2.12.26 DSA Report.pdf
 (0.02
+MB)
+10.2
+Council Announcements
+11.
+ADJOURNMENT
+11.1
+Adjourn Meeting
+In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
+
+
+
+================================================================================
+
+
+DOCUMENT TYPE: HTML Agenda
+MEETING: 2026-03-12T18:00 City Council Regular Meeting
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=ec8f7d39905446e88377e3c78425d259&ip=false
+================================================================================
+
+1.
+CALL TO ORDER
+2.
+OPENING
+2.1
+Invocation led by Pastor Andy Tribe, Youngsville Community Church.
+2.2
+Pledge of Allegiance led by Matt Romero.
+3.
+ROLL CALL
+4.
+MINUTES
+4.1
+Approval of February 12, 2026 minutes.
+5.
+FINANCE REPORT
+5.1
+Approval of January 2026 finance report.
+6.
+PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+6.1
+Request for Preliminary Plat approval of Goodrich Properties of Louisiana, LLC, a residential development, creating Lots 4-A-1 & 4-A-2, located in Section 2, T11S, R4E.
+7.
+OTHER BUSINESS
+7.1
+Presentation and acceptance of Audit Report for Fiscal Year ending June 30, 2025 - Burton Kolder (Kolder, Slaven & Company, LLC)
+8.
+RESOLUTIONS
+8.1
+Resolution No. 2026-06
+- A Resolution authorizing the Mayor to execute a Cooperative Endeavor Agreement between the City of Youngsville and the Youngsville Chamber of Commerce; and providing for related matters.
+8.2
+Resolution No. 2026-07
+- A Resolution levying the millage rates for 2026.
+8.3
+Resolution No. 2026-08
+- A Resolution amending the 2025-2026 Capital Projects Budget – Capital Projects Fund in the amount of $250,000 to provide funding various projects, to be funded from the 1968 1% Sales Tax.
+8.4
+Resolution No. 2026-09
+- A Resolution amending the 2025-2026 Capital Projects Budget – General Fund in the amount of $979 to provide additional funding for a Multiquip Track Buggy, to be funded from the General Fund.
+8.5
+Resolution No. 2026-10
+- A Resolution amending the 2025-2026 Capital Projects Budget – YSC Parks & Recreation Fund in the amount of $5,963 to reappropriate funding from the LED Lighting - Baseball Project to various projects.
+8.6
+Resolution No. 2026-11
+- A Resolution authorizing the Mayor to execute any and all documents pertaining to the FY 2027 Community Project Funding (CPF) for the City of Youngsville Water System Capacity and Pressure Improvements project and further approving 20% in local match funds.
+9.
+ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
+9.1
+Ordinance No. 509-2026
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances Chapter 110 "Design Standards" and Chapter 107 "Commercial Development Requirements", as it relates to finished floor determinations for residential and commercial developments.
+9.2
+Ordinance No. 510-2026
+- An Ordinance of the City of Youngsville, Louisiana declaring movable property as surplus and further authorizing the demolishment and disposal in accordance with state law.
+10.
+MAYOR & COUNCIL ANNOUNCEMENTS
+10.1
+Mayor/Staff Announcements
+10.2
+Council Announcements
+11.
+ADJOURNMENT
+11.1
+Adjourn Meeting
+In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
+
+
+
+================================================================================
+
+
+DOCUMENT TYPE: HTML Packet
+MEETING: 2026-03-12T18:00 City Council Regular Meeting
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=ec8f7d39905446e88377e3c78425d259&ip=true
+================================================================================
+
+1.
+CALL TO ORDER
+2.
+OPENING
+2.1
+Invocation led by Pastor Andy Tribe, Youngsville Community Church.
+2.2
+Pledge of Allegiance led by Matt Romero.
+3.
+ROLL CALL
+4.
+MINUTES
+4.1
+Approval of February 12, 2026 minutes.
+2.12.26 Minutes.pdf
+(0.04
+MB)
+5.
+FINANCE REPORT
+5.1
+Approval of January 2026 finance report.
+2026.01.31 FINANCIALS.pdf
+(0.77
+MB)
+6.
+PRELIMINARY PLATS (PUBLIC HEARING AND ADOPTION)
+6.1
+Request for Preliminary Plat approval of Goodrich Properties of Louisiana, LLC, a residential development, creating Lots 4-A-1 & 4-A-2, located in Section 2, T11S, R4E.
+2435 E. Milton Ave - Preliminary Plat Review.pdf
+(0.13
+MB)
+Preliminary Plat Final - EMA.pdf
+(0.85
+MB)
+7.
+OTHER BUSINESS
+7.1
+Presentation and acceptance of Audit Report for Fiscal Year ending June 30, 2025 - Burton Kolder (Kolder, Slaven & Company, LLC)
+8.
+RESOLUTIONS
+8.1
+Resolution No. 2026-06
+- A Resolution authorizing the Mayor to execute a Cooperative Endeavor Agreement between the City of Youngsville and the Youngsville Chamber of Commerce; and providing for related matters.
+Reso. No. 2026-06 CEA with Chamber.pdf
+(0.02
+MB)
+COY-YCC CEA.final.pdf
+(0.03
+MB)
+8.2
+Resolution No. 2026-07
+- A Resolution levying the millage rates for 2026.
+Reso. No. 2026-07 Levy 2026 Millages.pdf
+(0.02
+MB)
+8.3
+Resolution No. 2026-08
+- A Resolution amending the 2025-2026 Capital Projects Budget – Capital Projects Fund in the amount of $250,000 to provide funding various projects, to be funded from the 1968 1% Sales Tax.
+Reso. No. 2026-08 Amend Capital Projects Budget - Capital Projects Fund.pdf
+(0.02
+MB)
+Budget Adjustments Capital Projects Budget for Capital Projects Fund.pdf
+(0.60
+MB)
+8.4
+Resolution No. 2026-09
+- A Resolution amending the 2025-2026 Capital Projects Budget – General Fund in the amount of $979 to provide additional funding for a Multiquip Track Buggy, to be funded from the General Fund.
+Reso. No. 2026-09 Amend Capital Projects Budget - General Fund.pdf
+(0.02
+MB)
+Budget Adjustment Capital Projects Budget for General Fund.pdf
+(0.59
+MB)
+8.5
+Resolution No. 2026-10
+- A Resolution amending the 2025-2026 Capital Projects Budget – YSC Parks & Recreation Fund in the amount of $5,963 to reappropriate funding from the LED Lighting - Baseball Project to various projects.
+Reso. No. 2026-10 Amend Capital Projects Budget - YSC Parks & Rec.pdf
+(0.02
+MB)
+Budget Adjustments Capital Projects Budget for YSC reappropriation.pdf
+(0.61
+MB)
+8.6
+Resolution No. 2026-11
+- A Resolution authorizing the Mayor to execute any and all documents pertaining to the FY 2027 Community Project Funding (CPF) for the City of Youngsville Water System Capacity and Pressure Improvements project and further approving 20% in local match funds.
+Reso. No. 2026-11 Community Project Funding (CPF)Grant.pdf
+(0.02
+MB)
+9.
+ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
+9.1
+Ordinance No. 509-2026
+- An Ordinance of the City of Youngsville, Louisiana amending the Code of Ordinances Chapter 110 "Design Standards" and Chapter 107 "Commercial Development Requirements", as it relates to finished floor determinations for residential and commercial developments.
+Ord. No. 509-2026 Amend Code for Finished Floor Determinations.pdf
+(0.12
+MB)
+9.2
+Ordinance No. 510-2026
+- An Ordinance of the City of Youngsville, Louisiana declaring movable property as surplus and further authorizing the demolishment and disposal in accordance with state law.
+Ord. No. 510-2026 Surplus Building 1040 Iberia St.pdf
+(0.02
+MB)
+10.
+MAYOR & COUNCIL ANNOUNCEMENTS
+10.1
+Mayor/Staff Announcements
+3.12.26 DSA Report.pdf
+(0.02
+MB)
+3.12.26 Sports Complex Report.pdf
+(0.03
 MB)
 10.2
 Council Announcements
