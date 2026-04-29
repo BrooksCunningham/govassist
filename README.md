@@ -1,6 +1,9 @@
 
 # Govassist
 
+[![Run Transcription Pipeline](https://github.com/BrooksCunningham/govassist/actions/workflows/transcribe.yml/badge.svg)](https://github.com/BrooksCunningham/govassist/actions/workflows/transcribe.yml)
+[![Scrape Meeting Documents](https://github.com/BrooksCunningham/govassist/actions/workflows/scrape_meetings.yml/badge.svg)](https://github.com/BrooksCunningham/govassist/actions/workflows/scrape_meetings.yml)
+
 Govassist is a utility designed to automate the process of downloading, extracting, and transcribing video recordings—primarily from public meetings such as city council sessions. The tool is particularly useful for generating searchable, text-based archives of civic meetings. Check out the videos that are generated on the following playlist. https://www.youtube.com/playlist?list=PLkHdjHKjvOxH5BeXoPJhcdS4MzRBq0EJO
 
 ## Features
