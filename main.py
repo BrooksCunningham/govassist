@@ -108,9 +108,12 @@ def make_filename_from_playlist_entry(entry):
       - title:             e.g. "Council Meeting 7.9.26"
       - pubdate_formatted: e.g. "Thursday, July 9, 2026"
       - pubtime_formatted: e.g. "5:56 PM CDT"
-    Returns a sanitized string suitable for use as a filename.
+    Returns a sanitized string suitable for use as a filename, or "" if title is missing.
     """
-    title = entry.get("title", "")
+    title = entry.get("title", "").strip()
+    if not title:
+        return ""
+
     pubdate = entry.get("pubdate_formatted", "")
     pubtime = entry.get("pubtime_formatted", "")
 
@@ -124,7 +127,9 @@ def make_filename_from_playlist_entry(entry):
         except ValueError:
             continue
 
-    # Strip timezone abbreviation from time string (e.g. "5:56 PM CDT" → "5:56 PM")
+    # Strip timezone suffix from time string.
+    # Observed formats: "5:56 PM CDT", "5:56 PM CST".
+    # This pattern covers common abbreviations (2-4 uppercase letters).
     time_clean = re.sub(r'\s+[A-Z]{2,4}$', '', pubtime).strip()
 
     # Compose a human-readable string and sanitize it
@@ -299,9 +304,8 @@ def process_meetings():
                     download_file(video_url, video_filename)
                 if os.path.exists(video_filename):
                     extract_audio_func(video_filename, audio_file_path)
-                    if os.path.exists(video_filename):
-                        logging.info(f"Removing video file {video_filename} to save space...")
-                        os.remove(video_filename)
+                    logging.info(f"Removing video file {video_filename} to save space...")
+                    os.remove(video_filename)
             else:
                 logging.warning(f"No download URL found for {base_filename}. Skipping.")
                 continue
