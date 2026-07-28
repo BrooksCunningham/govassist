@@ -1,7 +1,7 @@
 ================================================================================
 YOUNGSVILLE LIVESTREAM MEETING DOCUMENTS
 Scraped from: https://meetings.municode.com/PublishPage/index?cid=YOUNGSVILA&ppid=5d44059a-1e19-4452-a226-babc4b369c18&p={}
-Generated: 2026-07-01T02:32:22.793011+00:00
+Generated: 2026-07-28T14:06:10.348453+00:00
 ================================================================================
 
 
@@ -1301,6 +1301,153 @@ MB)
 6.
 ADJOURNMENT
 6.1
+Adjourn Meeting
+In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
+
+
+
+================================================================================
+
+
+DOCUMENT TYPE: HTML Agenda
+MEETING: 2026-07-09T18:00 City Council Regular Meeting
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=127667a1e3ba43a3abf3a382ea29357a&ip=false
+================================================================================
+
+1.
+OPENING
+1.1
+Invocation led by Pastor Andy Manning, Church Acadiana.
+1.2
+Pledge of Allegiance led by Matt Romero.
+2.
+ROLL CALL
+3.
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
+3.1
+Justin Centanni, Lafyette Parish Assessor to announce satellite locations for assessment review period.
+4.
+MINUTES
+4.1
+Approval of June 25, 2026 special meeting minutes.
+5.
+FINANCE REPORT
+5.1
+Approval of May 2026 finance report.
+6.
+OTHER BUSINESS
+6.1
+Consider a motion for a veto override of Ordinance No. 513-2026, which amends the Code of Ordinances Chapter 12 "Nuisances" as it relates to operations and fines for construction or repairs.
+Note: a veto override requires a 2/3 vote (4 votes).
+7.
+RESOLUTIONS
+7.1
+Resolution No. 2026-18
+- A Resolution authorizing the Mayor to execute a Cooperative Endeavor Agreement with Lafayette Charter Foundation, Inc. for School Resource Officers at the Acadiana Renaissance Charter Academy, commencing on August 1, 2026, for a two-year term.
+7.2
+Resolution No. 2026-19
+- A Resolution authorizing the Mayor to execute a change order for the Hwy 92 Improvements, Planning & Construction (Left Turn Lanes) in the amount of $323,126.62, and further authorizing the necessary budget amendment.
+8.
+ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
+8.1
+Ordinance No. 514-2026
+- An Ordinance of the City of Youngsville, Louisiana authorizing the City of Youngsville to sell certain immovable surplus property located at 225 Tall Oaks Ln., Youngsville, Louisiana, which is not needed for public purposes.
+9.
+MAYOR & COUNCIL ANNOUNCEMENTS
+9.1
+Mayor/Staff Announcements
+9.2
+Council Announcements
+10.
+ADJOURNMENT
+10.1
+Adjourn Meeting
+In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
+
+
+
+================================================================================
+
+
+DOCUMENT TYPE: HTML Packet
+MEETING: 2026-07-09T18:00 City Council Regular Meeting
+URL: https://meetings.municode.com/adaHtmlDocument/index?cc=YOUNGSVILA&me=127667a1e3ba43a3abf3a382ea29357a&ip=true
+================================================================================
+
+1.
+OPENING
+1.1
+Invocation led by Pastor Andy Manning, Church Acadiana.
+1.2
+Pledge of Allegiance led by Matt Romero.
+2.
+ROLL CALL
+3.
+RECOGNITIONS/PERSONS TO ADDRESS THE MAYOR & COUNCIL
+3.1
+Justin Centanni, Lafyette Parish Assessor to announce satellite locations for assessment review period.
+4.
+MINUTES
+4.1
+Approval of June 25, 2026 special meeting minutes.
+6.25.26 Minutes Special.pdf
+(0.03
+MB)
+5.
+FINANCE REPORT
+5.1
+Approval of May 2026 finance report.
+6.
+OTHER BUSINESS
+6.1
+Consider a motion for a veto override of Ordinance No. 513-2026, which amends the Code of Ordinances Chapter 12 "Nuisances" as it relates to operations and fines for construction or repairs.
+Note: a veto override requires a 2/3 vote (4 votes).
+Ord. No. 513-2026 VETO Statement .pdf
+(0.06
+MB)
+Ord. No. 513-2026 Amend Code Sec. 12-77 Construction or repairs.pdf
+(0.10
+MB)
+7.
+RESOLUTIONS
+7.1
+Resolution No. 2026-18
+- A Resolution authorizing the Mayor to execute a Cooperative Endeavor Agreement with Lafayette Charter Foundation, Inc. for School Resource Officers at the Acadiana Renaissance Charter Academy, commencing on August 1, 2026, for a two-year term.
+Reso. No. 2026-18 CEA  Laf. Charter Foundation ARCA SRO's.pdf
+(0.02
+MB)
+Proposed SRO Agreement 2026.pdf
+(0.04
+MB)
+7.2
+Resolution No. 2026-19
+- A Resolution authorizing the Mayor to execute a change order for the Hwy 92 Improvements, Planning & Construction (Left Turn Lanes) in the amount of $323,126.62, and further authorizing the necessary budget amendment.
+Reso. No. 2026-19 Change Order Hwy 92 Improvements.pdf
+(0.02
+MB)
+Change Order #2 Letter and Backup.pdf
+(0.30
+MB)
+8.
+ORDINANCES FOR PUBLIC HEARING AND FINAL ADOPTION
+8.1
+Ordinance No. 514-2026
+- An Ordinance of the City of Youngsville, Louisiana authorizing the City of Youngsville to sell certain immovable surplus property located at 225 Tall Oaks Ln., Youngsville, Louisiana, which is not needed for public purposes.
+Ord. No. 514-2026  Surplus Property 225 Tall Oaks.pdf
+(0.03
+MB)
+9.
+MAYOR & COUNCIL ANNOUNCEMENTS
+9.1
+Mayor/Staff Announcements
+7.9.26 YSC Report.pdf
+(0.02
+MB)
+9.2
+Council Announcements
+10.
+ADJOURNMENT
+10.1
 Adjourn Meeting
 In accordance with the Americans with Disabilities Act, persons who need accommodation in order to attend or participate in this meeting should contact City Hall at (337) 856-4181 within 48 hours prior to the meeting in order to request such assistance.
 
