@@ -1,12 +1,12 @@
 import os
+import re
+import json
 import requests
-from bs4 import BeautifulSoup
 import shutil
 import whisper
 import logging
 import inspect
 import warnings
-import re
 from datetime import datetime
 
 # --- Diagnostic Block ---
@@ -44,10 +44,10 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
 
 # --- Constants ---
-# Base URL for the website and the mp4 storage domain
+# Archive embed URL that contains the JSON playlist of all meeting recordings.
+# This is loaded inside an iframe on https://www.youngsville.us/livestream/
 from moviepy import VideoFileClip
-BASE_URL = "https://meetings.municode.com/PublishPage?cid=YOUNGSVILA&ppid=5d44059a-1e19-4452-a226-babc4b369c18&p={}"
-VIDEO_DOMAIN = "https://storage.sheenomo.live"
+ARCHIVE_EMBED_URL = "https://cache.stl.sheenomo.live/eo8nUQfCKXC8M0scH2zp0pmIzMdzmzDg/channels/1/embeds/players/vUzCgGBxuMEjQUfW/render"
 
 # --- Folder Setup ---
 # Create necessary folders if they don't exist
@@ -100,6 +100,45 @@ def convert_to_iso8601_datetime(meeting_info):
     
     # Return formatted string with meeting description
     return f"{iso_datetime} {meeting_desc.strip()}"
+
+def make_filename_from_playlist_entry(entry):
+    """
+    Build a base filename from a playlist entry returned by the sheenomo.live archive embed.
+    Each entry contains:
+      - title:             e.g. "Council Meeting 7.9.26"
+      - pubdate_formatted: e.g. "Thursday, July 9, 2026"
+      - pubtime_formatted: e.g. "5:56 PM CDT"
+    Returns a sanitized string suitable for use as a filename, or "" if title is missing.
+    """
+    title = entry.get("title", "").strip()
+    if not title:
+        return ""
+
+    pubdate = entry.get("pubdate_formatted", "")
+    pubtime = entry.get("pubtime_formatted", "")
+
+    # Parse the date: "Thursday, July 9, 2026" → datetime
+    iso_date = ""
+    for fmt in ("%A, %B %d, %Y", "%B %d, %Y"):
+        try:
+            dt = datetime.strptime(pubdate, fmt)
+            iso_date = dt.strftime("%Y-%m-%d")
+            break
+        except ValueError:
+            continue
+
+    # Strip timezone suffix from time string.
+    # Observed formats: "5:56 PM CDT", "5:56 PM CST".
+    # This pattern covers common abbreviations (2-4 uppercase letters).
+    time_clean = re.sub(r'\s+[A-Z]{2,4}$', '', pubtime).strip()
+
+    # Compose a human-readable string and sanitize it
+    if iso_date:
+        composed = f"{iso_date}T{time_clean} {title}"
+    else:
+        composed = title
+
+    return sanitize_filename(composed)
 
 def sanitize_filename(text, max_length=100):
     """
@@ -183,87 +222,102 @@ def transcribe_audio(audio_file, transcription_file):
     except Exception as e:
         logging.error(f"Error during transcription of {audio_file}: {e}")
 
-def process_page(page_number):
-    """Processes a single page: finds video links and orchestrates the download-extract-transcribe workflow."""
-    logging.info(f"Processing page {page_number}...")
-    
-    url = BASE_URL.format(page_number)
+def fetch_playlist():
+    """
+    Fetch the sheenomo.live archive embed page and extract the meeting playlist.
+
+    The embed page embeds all meeting metadata in a JavaScript variable:
+        _SCIO.config.playerSetup.originalPlaylist = [ ... ];
+    Each entry contains title, pubdate_formatted, pubtime_formatted,
+    videoDownloadURL, audioDownloadURL, and HLS sources.
+
+    Returns a list of dicts (one per meeting), or an empty list on failure.
+    """
+    logging.info(f"Fetching archive playlist from {ARCHIVE_EMBED_URL}...")
     try:
-        response = requests.get(url, timeout=60)
+        response = requests.get(ARCHIVE_EMBED_URL, timeout=60)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
-        logging.error(f"Could not retrieve page {page_number}. Error: {e}")
+        logging.error(f"Could not retrieve archive embed. Error: {e}")
+        return []
+
+    html = response.text
+
+    # Extract the JSON array assigned to originalPlaylist
+    match = re.search(
+        r'_SCIO\.config\.playerSetup\.originalPlaylist\s*=\s*(\[.*?\]);',
+        html,
+        re.DOTALL,
+    )
+    if not match:
+        logging.error("Could not find originalPlaylist in archive embed page.")
+        return []
+
+    try:
+        playlist = json.loads(match.group(1))
+        logging.info(f"Found {len(playlist)} meeting(s) in playlist.")
+        return playlist
+    except json.JSONDecodeError as e:
+        logging.error(f"Failed to parse playlist JSON: {e}")
+        return []
+
+
+def process_meetings():
+    """
+    Fetch all archived meeting recordings and orchestrate the
+    download-transcribe workflow for each entry.
+
+    The sheenomo.live embed exposes a direct audioDownloadURL for every
+    meeting, so we download the audio file directly and skip the
+    video-download + audio-extraction steps entirely.
+    """
+    playlist = fetch_playlist()
+    if not playlist:
+        logging.info("No meetings found in playlist.")
         return
 
-    soup = BeautifulSoup(response.content, "html.parser")
-    # Find all anchor tags whose href contains the video storage domain
-    mp4_links = soup.find_all('a', href=lambda href: href and VIDEO_DOMAIN in href)
-    
-    if not mp4_links:
-        logging.info(f"No video links found on page {page_number}.")
-        return
+    for entry in playlist:
+        base_filename = make_filename_from_playlist_entry(entry)
+        if not base_filename:
+            logging.warning(f"Could not build filename for entry: {entry.get('title')}")
+            continue
 
-    for link in mp4_links:
-        video_url = link['href']
-        img_tag = link.find('img')
-        base_filename = ""
+        audio_url = entry.get("audioDownloadURL", "")
+        video_url = entry.get("videoDownloadURL", "")
 
-        if img_tag and 'alt' in img_tag.attrs:
-            # Get alt text (e.g., "Multimedia for November 13, 2025 City Council Regular Meeting at 6:00 PM")
-            alt_text = img_tag['alt']
-            
-            # Extract meeting info after "Multimedia for " or similar prefix
-            if 'for ' in alt_text:
-                meeting_info = alt_text.split('for ', 1)[1]
-                # Convert to ISO 8601 format
-                iso_formatted = convert_to_iso8601_datetime(meeting_info)
-                # Sanitize for use as filename
-                base_filename = sanitize_filename(iso_formatted)
-            else:
-                # Fallback to basic sanitization if pattern doesn't match
-                sanitized_name = img_tag['alt'].replace(' ', '_').replace(':', '').replace(',', '')
-                base_filename = f"{sanitized_name}"
-        else:
-            # Create a fallback name from the URL if no alt text is available.
-            base_filename = os.path.splitext(os.path.basename(video_url))[0]
-
-        # Define file paths for each stage of the process.
-        video_filename = os.path.join(download_folder, f"{base_filename}.mp4")
         audio_file_path = os.path.join(audio_folder, f"{base_filename}.mp3")
         transcription_file_path = os.path.join(transcription_folder, f"{base_filename}.txt")
 
-        # --- Main Workflow Logic ---
         # 1. Skip all steps if the final output (transcription) already exists.
         if os.path.exists(transcription_file_path):
             logging.info(f"Final transcription exists for {base_filename}. Skipping all steps.")
             continue
 
-        # 2. Download video only if the audio doesn't already exist and the video isn't already there.
-        if not os.path.exists(audio_file_path) and not os.path.exists(video_filename):
-            download_file(video_url, video_filename)
-        
-        # 3. Extract audio if the video file is present.
-        if os.path.exists(video_filename):
-            extract_audio_func(video_filename, audio_file_path)
-        
-        # 4. Transcribe the audio file if it exists.
+        # 2. Download audio directly if available, otherwise fall back to video.
+        if not os.path.exists(audio_file_path):
+            if audio_url:
+                logging.info(f"Downloading audio directly for {base_filename}...")
+                download_file(audio_url, audio_file_path)
+            elif video_url:
+                video_filename = os.path.join(download_folder, f"{base_filename}.mp4")
+                if not os.path.exists(video_filename):
+                    download_file(video_url, video_filename)
+                if os.path.exists(video_filename):
+                    extract_audio_func(video_filename, audio_file_path)
+                    logging.info(f"Removing video file {video_filename} to save space...")
+                    os.remove(video_filename)
+            else:
+                logging.warning(f"No download URL found for {base_filename}. Skipping.")
+                continue
+
+        # 3. Transcribe the audio file if it exists.
         transcribe_audio(audio_file_path, transcription_file_path)
-        
-        # 5. Clean up by removing the large video file after processing.
-        if os.path.exists(video_filename):
-            logging.info(f"Removing video file {video_filename} to save space...")
-            os.remove(video_filename)
-        
+
         logging.info("-" * 20)
 
 def main():
     """Main function to run the scraper and transcription process."""
-    # Assuming there are 5 pages to process based on the website structure.
-    total_pages = 5
-    
-    for page_number in range(1, total_pages + 1):
-        process_page(page_number)
-    
+    process_meetings()
     logging.info("\nProcessing complete.")
 
 
