@@ -7,7 +7,7 @@ imageio==2.37.4
 imageio-ffmpeg==0.6.0
 moviepy==2.2.1
 numpy==2.4.6
-pillow==12.3.0
+pillow==11.3.0
 proglog==0.1.12
 python-dotenv==1.2.2
 requests==2.34.2
