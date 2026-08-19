@@ -18,7 +18,7 @@ from datetime import datetime
 # This is the municode iframe URL that contains the meeting list
 BASE_URL = "https://meetings.municode.com/PublishPage/index?cid=YOUNGSVILA&ppid=5d44059a-1e19-4452-a226-babc4b369c18&p={}"
 TOTAL_PAGES = 4  # The municode page has 4 pages of meetings
-SCRAPED_DIR = Path("./scraped_content")
+SCRAPED_DIR = Path("./meeting_documents")
 OUTPUT_FILE = "notebooklm_source.txt"
 TARGET_LINK_TEXTS = ["HTML Packet", "HTML Agenda"]
 

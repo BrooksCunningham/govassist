@@ -93,7 +93,7 @@ python scrape.py
 ```
 
 The script will:
-1. Create a `scraped_content/` directory for intermediate files
+1. Create a `meeting_documents/` directory for intermediate files
 2. Fetch all pages from the Youngsville meeting archive
 3. Download and extract text from each HTML Agenda and HTML Packet
 4. Generate `notebooklm_source.txt` with all combined content
@@ -116,7 +116,7 @@ You can also trigger the workflow manually from the Actions tab.
 ### Output
 
 - **`notebooklm_source.txt`**: Combined text file ready for NotebookLM upload
-- **`scraped_content/`**: Directory with individual text files for each document
+- **`meeting_documents/`**: Directory with individual text files for each document
 
 ## License
 

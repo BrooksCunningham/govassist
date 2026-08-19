@@ -46,7 +46,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
           # Add the output file and scraped content directory
-          git add notebooklm_source.txt scraped_content/
+          git add notebooklm_source.txt meeting_documents/
 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
